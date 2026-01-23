@@ -23,73 +23,73 @@
 // Clang/GCC warnings with -Weverything
 #if defined(__clang__)
 #pragma clang diagnostic ignored \
-    "-Wold-style-cast"  // warning: use of old-style cast // yes, they are more
-                        // terse.
+	"-Wold-style-cast"	// warning: use of old-style cast // yes, they are more
+						// terse.
 #endif
 
 IMGUI_IMPL_API bool ImGui_ImplNull_Init() {
-  ImGui_ImplNullPlatform_Init();
-  ImGui_ImplNullRender_Init();
-  return true;
+	ImGui_ImplNullPlatform_Init();
+	ImGui_ImplNullRender_Init();
+	return true;
 }
 
 IMGUI_IMPL_API void ImGui_ImplNull_Shutdown() {
-  ImGui_ImplNullRender_Shutdown();
-  ImGui_ImplNullPlatform_Shutdown();
+	ImGui_ImplNullRender_Shutdown();
+	ImGui_ImplNullPlatform_Shutdown();
 }
 
 IMGUI_IMPL_API void ImGui_ImplNull_NewFrame() {
-  ImGui_ImplNullPlatform_NewFrame();
-  ImGui_ImplNullRender_NewFrame();
+	ImGui_ImplNullPlatform_NewFrame();
+	ImGui_ImplNullRender_NewFrame();
 }
 
 IMGUI_IMPL_API bool ImGui_ImplNullPlatform_Init() {
-  ImGuiIO& io = ImGui::GetIO();
-  io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
-  return true;
+	ImGuiIO& io = ImGui::GetIO();
+	io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
+	return true;
 }
 
 IMGUI_IMPL_API void ImGui_ImplNullPlatform_Shutdown() {
-  ImGuiIO& io = ImGui::GetIO();
-  io.BackendFlags &= ~ImGuiBackendFlags_HasMouseCursors;
+	ImGuiIO& io = ImGui::GetIO();
+	io.BackendFlags &= ~ImGuiBackendFlags_HasMouseCursors;
 }
 
 IMGUI_IMPL_API void ImGui_ImplNullPlatform_NewFrame() {
-  ImGuiIO& io = ImGui::GetIO();
-  io.DisplaySize = ImVec2(1920, 1080);
-  io.DeltaTime = 1.0f / 60.0f;
+	ImGuiIO& io = ImGui::GetIO();
+	io.DisplaySize = ImVec2(1920, 1080);
+	io.DeltaTime = 1.0f / 60.0f;
 }
 
 IMGUI_IMPL_API bool ImGui_ImplNullRender_Init() {
-  ImGuiIO& io = ImGui::GetIO();
-  io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
-  io.BackendFlags |= ImGuiBackendFlags_RendererHasTextures;
-  return true;
+	ImGuiIO& io = ImGui::GetIO();
+	io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
+	io.BackendFlags |= ImGuiBackendFlags_RendererHasTextures;
+	return true;
 }
 
 IMGUI_IMPL_API void ImGui_ImplNullRender_Shutdown() {
-  ImGuiIO& io = ImGui::GetIO();
-  io.BackendFlags &= ~ImGuiBackendFlags_RendererHasVtxOffset;
-  io.BackendFlags &= ~ImGuiBackendFlags_RendererHasTextures;
+	ImGuiIO& io = ImGui::GetIO();
+	io.BackendFlags &= ~ImGuiBackendFlags_RendererHasVtxOffset;
+	io.BackendFlags &= ~ImGuiBackendFlags_RendererHasTextures;
 }
 
 IMGUI_IMPL_API void ImGui_ImplNullRender_NewFrame() {}
 
 static void ImGui_ImplNullRender_UpdateTexture(ImTextureData* tex) {
-  if (tex->Status == ImTextureStatus_WantCreate ||
-      tex->Status == ImTextureStatus_WantDestroy)
-    tex->SetStatus(ImTextureStatus_OK);
-  if (tex->Status == ImTextureStatus_WantDestroy) {
-    tex->SetTexID(ImTextureID_Invalid);
-    tex->SetStatus(ImTextureStatus_Destroyed);
-  }
+	if (tex->Status == ImTextureStatus_WantCreate ||
+		tex->Status == ImTextureStatus_WantDestroy)
+		tex->SetStatus(ImTextureStatus_OK);
+	if (tex->Status == ImTextureStatus_WantDestroy) {
+		tex->SetTexID(ImTextureID_Invalid);
+		tex->SetStatus(ImTextureStatus_Destroyed);
+	}
 }
 
 IMGUI_IMPL_API void ImGui_ImplNullRender_RenderDrawData(ImDrawData* draw_data) {
-  if (draw_data->Textures != nullptr)
-    for (ImTextureData* tex : *draw_data->Textures)
-      if (tex->Status != ImTextureStatus_OK)
-        ImGui_ImplNullRender_UpdateTexture(tex);
+	if (draw_data->Textures != nullptr)
+		for (ImTextureData* tex : *draw_data->Textures)
+			if (tex->Status != ImTextureStatus_OK)
+				ImGui_ImplNullRender_UpdateTexture(tex);
 }
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

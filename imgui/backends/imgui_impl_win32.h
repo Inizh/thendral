@@ -24,7 +24,7 @@
 // - Introduction, links and more at the top of imgui.cpp
 
 #pragma once
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 #ifndef IMGUI_DISABLE
 
 // Follow "Getting Started" link and check examples/ folder to learn about using
@@ -59,14 +59,14 @@ extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg
 //   to avoid dependencies.
 IMGUI_IMPL_API void ImGui_ImplWin32_EnableDpiAwareness();
 IMGUI_IMPL_API float ImGui_ImplWin32_GetDpiScaleForHwnd(
-    void* hwnd);  // HWND hwnd
+	void* hwnd);  // HWND hwnd
 IMGUI_IMPL_API float ImGui_ImplWin32_GetDpiScaleForMonitor(
-    void* monitor);  // HMONITOR monitor
+	void* monitor);	 // HMONITOR monitor
 
 // Transparency related helpers (optional) [experimental]
 // - Use to enable alpha compositing transparency with the desktop.
 // - Use together with e.g. clearing your framebuffer with zero-alpha.
 IMGUI_IMPL_API void ImGui_ImplWin32_EnableAlphaCompositing(
-    void* hwnd);  // HWND hwnd
+	void* hwnd);  // HWND hwnd
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

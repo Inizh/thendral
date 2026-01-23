@@ -21,7 +21,7 @@
 // - Introduction, links and more at the top of imgui.cpp
 
 #pragma once
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 #ifndef IMGUI_DISABLE
 
 struct IDirect3DDevice9;
@@ -43,4 +43,4 @@ IMGUI_IMPL_API void ImGui_ImplDX9_InvalidateDeviceObjects();
 // nullptr to handle this manually.
 IMGUI_IMPL_API void ImGui_ImplDX9_UpdateTexture(ImTextureData* tex);
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

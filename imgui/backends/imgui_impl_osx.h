@@ -22,7 +22,7 @@
 // - Introduction, links and more at the top of imgui.cpp
 
 #pragma once
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 #ifndef IMGUI_DISABLE
 
 #ifdef __OBJC__
@@ -53,4 +53,4 @@ IMGUI_IMPL_API void ImGui_ImplOSX_NewFrame(void* _Nullable view);
 #endif
 #endif
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

@@ -19,7 +19,7 @@
 // - Introduction, links and more at the top of imgui.cpp
 
 #pragma once
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 #ifndef IMGUI_DISABLE
 
 struct ID3D10Device;
@@ -48,10 +48,10 @@ IMGUI_IMPL_API void ImGui_ImplDX10_UpdateTexture(ImTextureData* tex);
 // ImGui_ImplDX10_RenderDrawData() call. (Please open an issue if you feel you
 // need access to more data)
 struct ImGui_ImplDX10_RenderState {
-  ID3D10Device* Device;
-  ID3D10SamplerState* SamplerLinear;
-  ID3D10SamplerState* SamplerNearest;
-  ID3D10Buffer* VertexConstantBuffer;
+	ID3D10Device* Device;
+	ID3D10SamplerState* SamplerLinear;
+	ID3D10SamplerState* SamplerNearest;
+	ID3D10Buffer* VertexConstantBuffer;
 };
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

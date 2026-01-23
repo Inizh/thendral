@@ -34,7 +34,7 @@
 //   imgui_impl_sdlgpu3.cpp for more info.
 
 #pragma once
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 #ifndef IMGUI_DISABLE
 #include <SDL3/SDL_gpu.h>
 
@@ -43,13 +43,13 @@
 // rendering to the swapchain, call SDL_GetGPUSwapchainTextureFormat() to query
 // the right value
 struct ImGui_ImplSDLGPU3_InitInfo {
-  SDL_GPUDevice* Device = nullptr;
-  SDL_GPUTextureFormat ColorTargetFormat = SDL_GPU_TEXTUREFORMAT_INVALID;
-  SDL_GPUSampleCount MSAASamples = SDL_GPU_SAMPLECOUNT_1;
-  SDL_GPUSwapchainComposition SwapchainComposition =
-      SDL_GPU_SWAPCHAINCOMPOSITION_SDR;  // Only used in multi-viewports mode.
-  SDL_GPUPresentMode PresentMode =
-      SDL_GPU_PRESENTMODE_VSYNC;  // Only used in multi-viewports mode.
+	SDL_GPUDevice* Device = nullptr;
+	SDL_GPUTextureFormat ColorTargetFormat = SDL_GPU_TEXTUREFORMAT_INVALID;
+	SDL_GPUSampleCount MSAASamples = SDL_GPU_SAMPLECOUNT_1;
+	SDL_GPUSwapchainComposition SwapchainComposition =
+		SDL_GPU_SWAPCHAINCOMPOSITION_SDR;  // Only used in multi-viewports mode.
+	SDL_GPUPresentMode PresentMode =
+		SDL_GPU_PRESENTMODE_VSYNC;	// Only used in multi-viewports mode.
 };
 
 // Follow "Getting Started" link and check examples/ folder to learn about using
@@ -58,11 +58,11 @@ IMGUI_IMPL_API bool ImGui_ImplSDLGPU3_Init(ImGui_ImplSDLGPU3_InitInfo* info);
 IMGUI_IMPL_API void ImGui_ImplSDLGPU3_Shutdown();
 IMGUI_IMPL_API void ImGui_ImplSDLGPU3_NewFrame();
 IMGUI_IMPL_API void ImGui_ImplSDLGPU3_PrepareDrawData(
-    ImDrawData* draw_data, SDL_GPUCommandBuffer* command_buffer);
+	ImDrawData* draw_data, SDL_GPUCommandBuffer* command_buffer);
 IMGUI_IMPL_API void ImGui_ImplSDLGPU3_RenderDrawData(
-    ImDrawData* draw_data, SDL_GPUCommandBuffer* command_buffer,
-    SDL_GPURenderPass* render_pass,
-    SDL_GPUGraphicsPipeline* pipeline = nullptr);
+	ImDrawData* draw_data, SDL_GPUCommandBuffer* command_buffer,
+	SDL_GPURenderPass* render_pass,
+	SDL_GPUGraphicsPipeline* pipeline = nullptr);
 
 // Use if you want to reset your rendering device without losing Dear ImGui
 // state.
@@ -79,11 +79,11 @@ IMGUI_IMPL_API void ImGui_ImplSDLGPU3_UpdateTexture(ImTextureData* tex);
 // ImGui_ImplSDLGPU3_RenderDrawData() call. (Please open an issue if you feel
 // you need access to more data)
 struct ImGui_ImplSDLGPU3_RenderState {
-  SDL_GPUDevice* Device;
-  SDL_GPUSampler* SamplerLinear;   // Bilinear filtering sampler
-  SDL_GPUSampler* SamplerNearest;  // Nearest/point filtering sampler
-  SDL_GPUSampler*
-      SamplerCurrent;  // Current sampler (may be changed by callback)
+	SDL_GPUDevice* Device;
+	SDL_GPUSampler* SamplerLinear;	 // Bilinear filtering sampler
+	SDL_GPUSampler* SamplerNearest;	 // Nearest/point filtering sampler
+	SDL_GPUSampler*
+		SamplerCurrent;	 // Current sampler (may be changed by callback)
 };
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

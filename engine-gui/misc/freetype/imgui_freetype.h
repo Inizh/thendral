@@ -2,7 +2,7 @@
 // builder) (headers)
 
 #pragma once
-#include "imgui.h"  // IMGUI_API
+#include "imgui.h"	// IMGUI_API
 #ifndef IMGUI_DISABLE
 
 // Usage:
@@ -35,48 +35,49 @@ struct ImFontLoader;
 // ImFontConfig::FontLoaderFlags
 typedef unsigned int ImGuiFreeTypeLoaderFlags;
 enum ImGuiFreeTypeLoaderFlags_ {
-  ImGuiFreeTypeLoaderFlags_NoHinting =
-      1 << 0,  // Disable hinting. This generally generates 'blurrier' bitmap
-               // glyphs when the glyph are rendered in any of the anti-aliased
-               // modes.
-  ImGuiFreeTypeLoaderFlags_NoAutoHint = 1 << 1,  // Disable auto-hinter.
-  ImGuiFreeTypeLoaderFlags_ForceAutoHint =
-      1 << 2,  // Indicates that the auto-hinter is preferred over the font's
-               // native hinter.
-  ImGuiFreeTypeLoaderFlags_LightHinting =
-      1 << 3,  // A lighter hinting algorithm for gray-level modes. Many
-               // generated glyphs are fuzzier but better resemble their
-               // original shape. This is achieved by snapping glyphs to the
-               // pixel grid only vertically (Y-axis), as is done by Microsoft's
-               // ClearType and Adobe's proprietary font renderer. This
-               // preserves inter-glyph spacing in horizontal text.
-  ImGuiFreeTypeLoaderFlags_MonoHinting =
-      1 << 4,  // Strong hinting algorithm that should only be used for
-               // monochrome output.
-  ImGuiFreeTypeLoaderFlags_Bold =
-      1 << 5,  // Styling: Should we artificially embolden the font?
-  ImGuiFreeTypeLoaderFlags_Oblique =
-      1 << 6,  // Styling: Should we slant the font, emulating italic style?
-  ImGuiFreeTypeLoaderFlags_Monochrome =
-      1 << 7,  // Disable anti-aliasing. Combine this with MonoHinting for best
-               // results!
-  ImGuiFreeTypeLoaderFlags_LoadColor =
-      1 << 8,  // Enable FreeType color-layered glyphs
-  ImGuiFreeTypeLoaderFlags_Bitmap = 1 << 9,  // Enable FreeType bitmap glyphs
+	ImGuiFreeTypeLoaderFlags_NoHinting =
+		1 << 0,	 // Disable hinting. This generally generates 'blurrier' bitmap
+				 // glyphs when the glyph are rendered in any of the
+				 // anti-aliased modes.
+	ImGuiFreeTypeLoaderFlags_NoAutoHint = 1 << 1,  // Disable auto-hinter.
+	ImGuiFreeTypeLoaderFlags_ForceAutoHint =
+		1 << 2,	 // Indicates that the auto-hinter is preferred over the font's
+				 // native hinter.
+	ImGuiFreeTypeLoaderFlags_LightHinting =
+		1 << 3,	 // A lighter hinting algorithm for gray-level modes. Many
+				 // generated glyphs are fuzzier but better resemble their
+				 // original shape. This is achieved by snapping glyphs to the
+				 // pixel grid only vertically (Y-axis), as is done by
+				 // Microsoft's ClearType and Adobe's proprietary font renderer.
+				 // This preserves inter-glyph spacing in horizontal text.
+	ImGuiFreeTypeLoaderFlags_MonoHinting =
+		1 << 4,	 // Strong hinting algorithm that should only be used for
+				 // monochrome output.
+	ImGuiFreeTypeLoaderFlags_Bold =
+		1 << 5,	 // Styling: Should we artificially embolden the font?
+	ImGuiFreeTypeLoaderFlags_Oblique =
+		1 << 6,	 // Styling: Should we slant the font, emulating italic style?
+	ImGuiFreeTypeLoaderFlags_Monochrome =
+		1 << 7,	 // Disable anti-aliasing. Combine this with MonoHinting for
+				 // best results!
+	ImGuiFreeTypeLoaderFlags_LoadColor =
+		1 << 8,	 // Enable FreeType color-layered glyphs
+	ImGuiFreeTypeLoaderFlags_Bitmap = 1 << 9,  // Enable FreeType bitmap glyphs
 
 #ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
-  ImGuiFreeTypeBuilderFlags_NoHinting = ImGuiFreeTypeLoaderFlags_NoHinting,
-  ImGuiFreeTypeBuilderFlags_NoAutoHint = ImGuiFreeTypeLoaderFlags_NoAutoHint,
-  ImGuiFreeTypeBuilderFlags_ForceAutoHint =
-      ImGuiFreeTypeLoaderFlags_ForceAutoHint,
-  ImGuiFreeTypeBuilderFlags_LightHinting =
-      ImGuiFreeTypeLoaderFlags_LightHinting,
-  ImGuiFreeTypeBuilderFlags_MonoHinting = ImGuiFreeTypeLoaderFlags_MonoHinting,
-  ImGuiFreeTypeBuilderFlags_Bold = ImGuiFreeTypeLoaderFlags_Bold,
-  ImGuiFreeTypeBuilderFlags_Oblique = ImGuiFreeTypeLoaderFlags_Oblique,
-  ImGuiFreeTypeBuilderFlags_Monochrome = ImGuiFreeTypeLoaderFlags_Monochrome,
-  ImGuiFreeTypeBuilderFlags_LoadColor = ImGuiFreeTypeLoaderFlags_LoadColor,
-  ImGuiFreeTypeBuilderFlags_Bitmap = ImGuiFreeTypeLoaderFlags_Bitmap,
+	ImGuiFreeTypeBuilderFlags_NoHinting = ImGuiFreeTypeLoaderFlags_NoHinting,
+	ImGuiFreeTypeBuilderFlags_NoAutoHint = ImGuiFreeTypeLoaderFlags_NoAutoHint,
+	ImGuiFreeTypeBuilderFlags_ForceAutoHint =
+		ImGuiFreeTypeLoaderFlags_ForceAutoHint,
+	ImGuiFreeTypeBuilderFlags_LightHinting =
+		ImGuiFreeTypeLoaderFlags_LightHinting,
+	ImGuiFreeTypeBuilderFlags_MonoHinting =
+		ImGuiFreeTypeLoaderFlags_MonoHinting,
+	ImGuiFreeTypeBuilderFlags_Bold = ImGuiFreeTypeLoaderFlags_Bold,
+	ImGuiFreeTypeBuilderFlags_Oblique = ImGuiFreeTypeLoaderFlags_Oblique,
+	ImGuiFreeTypeBuilderFlags_Monochrome = ImGuiFreeTypeLoaderFlags_Monochrome,
+	ImGuiFreeTypeBuilderFlags_LoadColor = ImGuiFreeTypeLoaderFlags_LoadColor,
+	ImGuiFreeTypeBuilderFlags_Bitmap = ImGuiFreeTypeLoaderFlags_Bitmap,
 #endif
 };
 
@@ -98,13 +99,13 @@ IMGUI_API const ImFontLoader* GetFontLoader();
 // However, as FreeType does lots of allocations we provide a way for the user
 // to redirect it to a separate memory heap if desired.
 IMGUI_API void SetAllocatorFunctions(
-    void* (*alloc_func)(size_t sz, void* user_data),
-    void (*free_func)(void* ptr, void* user_data), void* user_data = nullptr);
+	void* (*alloc_func)(size_t sz, void* user_data),
+	void (*free_func)(void* ptr, void* user_data), void* user_data = nullptr);
 
 // Display UI to edit ImFontAtlas::FontLoaderFlags (shared) or
 // ImFontConfig::FontLoaderFlags (single source)
 IMGUI_API bool DebugEditFontLoaderFlags(
-    ImGuiFreeTypeLoaderFlags* p_font_loader_flags);
+	ImGuiFreeTypeLoaderFlags* p_font_loader_flags);
 
 // Obsolete names (will be removed)
 #ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
@@ -119,4 +120,4 @@ IMGUI_API bool DebugEditFontLoaderFlags(
 #endif
 }  // namespace ImGuiFreeType
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

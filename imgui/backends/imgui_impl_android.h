@@ -33,7 +33,7 @@
 // - Introduction, links and more at the top of imgui.cpp
 
 #pragma once
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 #ifndef IMGUI_DISABLE
 
 struct ANativeWindow;
@@ -47,4 +47,4 @@ ImGui_ImplAndroid_HandleInputEvent(const AInputEvent* input_event);
 IMGUI_IMPL_API void ImGui_ImplAndroid_Shutdown();
 IMGUI_IMPL_API void ImGui_ImplAndroid_NewFrame();
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

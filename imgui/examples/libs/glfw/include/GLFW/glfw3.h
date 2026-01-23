@@ -85,7 +85,7 @@ extern "C" {
 /* If we are we on Windows, we want a single define for it.
  */
 #if !defined(_WIN32) && \
-    (defined(__WIN32__) || defined(WIN32) || defined(__MINGW32__))
+	(defined(__WIN32__) || defined(WIN32) || defined(__MINGW32__))
 #define _WIN32
 #endif /* _WIN32 */
 
@@ -299,10 +299,10 @@ extern "C" {
 /* Printable keys */
 #define GLFW_KEY_SPACE 32
 #define GLFW_KEY_APOSTROPHE 39 /* ' */
-#define GLFW_KEY_COMMA 44      /* , */
-#define GLFW_KEY_MINUS 45      /* - */
-#define GLFW_KEY_PERIOD 46     /* . */
-#define GLFW_KEY_SLASH 47      /* / */
+#define GLFW_KEY_COMMA 44	   /* , */
+#define GLFW_KEY_MINUS 45	   /* - */
+#define GLFW_KEY_PERIOD 46	   /* . */
+#define GLFW_KEY_SLASH 47	   /* / */
 #define GLFW_KEY_0 48
 #define GLFW_KEY_1 49
 #define GLFW_KEY_2 50
@@ -314,7 +314,7 @@ extern "C" {
 #define GLFW_KEY_8 56
 #define GLFW_KEY_9 57
 #define GLFW_KEY_SEMICOLON 59 /* ; */
-#define GLFW_KEY_EQUAL 61     /* = */
+#define GLFW_KEY_EQUAL 61	  /* = */
 #define GLFW_KEY_A 65
 #define GLFW_KEY_B 66
 #define GLFW_KEY_C 67
@@ -342,11 +342,11 @@ extern "C" {
 #define GLFW_KEY_Y 89
 #define GLFW_KEY_Z 90
 #define GLFW_KEY_LEFT_BRACKET 91  /* [ */
-#define GLFW_KEY_BACKSLASH 92     /* \ */
+#define GLFW_KEY_BACKSLASH 92	  /* \ */
 #define GLFW_KEY_RIGHT_BRACKET 93 /* ] */
 #define GLFW_KEY_GRAVE_ACCENT 96  /* ` */
-#define GLFW_KEY_WORLD_1 161      /* non-US #1 */
-#define GLFW_KEY_WORLD_2 162      /* non-US #2 */
+#define GLFW_KEY_WORLD_1 161	  /* non-US #1 */
+#define GLFW_KEY_WORLD_2 162	  /* non-US #2 */
 
 /* Function keys */
 #define GLFW_KEY_ESCAPE 256
@@ -1124,24 +1124,24 @@ typedef void (*GLFWjoystickfun)(int, int);
  *  @ingroup monitor
  */
 typedef struct GLFWvidmode {
-  /*! The width, in screen coordinates, of the video mode.
-   */
-  int width;
-  /*! The height, in screen coordinates, of the video mode.
-   */
-  int height;
-  /*! The bit depth of the red channel of the video mode.
-   */
-  int redBits;
-  /*! The bit depth of the green channel of the video mode.
-   */
-  int greenBits;
-  /*! The bit depth of the blue channel of the video mode.
-   */
-  int blueBits;
-  /*! The refresh rate, in Hz, of the video mode.
-   */
-  int refreshRate;
+	/*! The width, in screen coordinates, of the video mode.
+	 */
+	int width;
+	/*! The height, in screen coordinates, of the video mode.
+	 */
+	int height;
+	/*! The bit depth of the red channel of the video mode.
+	 */
+	int redBits;
+	/*! The bit depth of the green channel of the video mode.
+	 */
+	int greenBits;
+	/*! The bit depth of the blue channel of the video mode.
+	 */
+	int blueBits;
+	/*! The refresh rate, in Hz, of the video mode.
+	 */
+	int refreshRate;
 } GLFWvidmode;
 
 /*! @brief Gamma ramp.
@@ -1156,18 +1156,18 @@ typedef struct GLFWvidmode {
  *  @ingroup monitor
  */
 typedef struct GLFWgammaramp {
-  /*! An array of value describing the response of the red channel.
-   */
-  unsigned short* red;
-  /*! An array of value describing the response of the green channel.
-   */
-  unsigned short* green;
-  /*! An array of value describing the response of the blue channel.
-   */
-  unsigned short* blue;
-  /*! The number of elements in each array.
-   */
-  unsigned int size;
+	/*! An array of value describing the response of the red channel.
+	 */
+	unsigned short* red;
+	/*! An array of value describing the response of the green channel.
+	 */
+	unsigned short* green;
+	/*! An array of value describing the response of the blue channel.
+	 */
+	unsigned short* blue;
+	/*! The number of elements in each array.
+	 */
+	unsigned int size;
 } GLFWgammaramp;
 
 /*! @brief Image data.
@@ -1178,15 +1178,15 @@ typedef struct GLFWgammaramp {
  *  @glfw3 Removed format and bytes-per-pixel members.
  */
 typedef struct GLFWimage {
-  /*! The width, in pixels, of this image.
-   */
-  int width;
-  /*! The height, in pixels, of this image.
-   */
-  int height;
-  /*! The pixel data of this image, arranged left-to-right, top-to-bottom.
-   */
-  unsigned char* pixels;
+	/*! The width, in pixels, of this image.
+	 */
+	int width;
+	/*! The height, in pixels, of this image.
+	 */
+	int height;
+	/*! The pixel data of this image, arranged left-to-right, top-to-bottom.
+	 */
+	unsigned char* pixels;
 } GLFWimage;
 
 /*************************************************************************
@@ -1462,7 +1462,7 @@ GLFWAPI void glfwGetMonitorPos(GLFWmonitor* monitor, int* xpos, int* ypos);
  *  @ingroup monitor
  */
 GLFWAPI void glfwGetMonitorPhysicalSize(GLFWmonitor* monitor, int* widthMM,
-                                        int* heightMM);
+										int* heightMM);
 
 /*! @brief Returns the name of the specified monitor.
  *
@@ -1817,7 +1817,7 @@ GLFWAPI void glfwWindowHint(int hint, int value);
  *  @ingroup window
  */
 GLFWAPI GLFWwindow* glfwCreateWindow(int width, int height, const char* title,
-                                     GLFWmonitor* monitor, GLFWwindow* share);
+									 GLFWmonitor* monitor, GLFWwindow* share);
 
 /*! @brief Destroys the specified window and its context.
  *
@@ -1954,7 +1954,7 @@ GLFWAPI void glfwSetWindowTitle(GLFWwindow* window, const char* title);
  *  @ingroup window
  */
 GLFWAPI void glfwSetWindowIcon(GLFWwindow* window, int count,
-                               const GLFWimage* images);
+							   const GLFWimage* images);
 
 /*! @brief Retrieves the position of the client area of the specified window.
  *
@@ -2083,8 +2083,8 @@ GLFWAPI void glfwGetWindowSize(GLFWwindow* window, int* width, int* height);
  *  @ingroup window
  */
 GLFWAPI void glfwSetWindowSizeLimits(GLFWwindow* window, int minwidth,
-                                     int minheight, int maxwidth,
-                                     int maxheight);
+									 int minheight, int maxwidth,
+									 int maxheight);
 
 /*! @brief Sets the aspect ratio of the specified window.
  *
@@ -2192,7 +2192,7 @@ GLFWAPI void glfwSetWindowSize(GLFWwindow* window, int width, int height);
  *  @ingroup window
  */
 GLFWAPI void glfwGetFramebufferSize(GLFWwindow* window, int* width,
-                                    int* height);
+									int* height);
 
 /*! @brief Retrieves the size of the frame of the window.
  *
@@ -2230,7 +2230,7 @@ GLFWAPI void glfwGetFramebufferSize(GLFWwindow* window, int* width,
  *  @ingroup window
  */
 GLFWAPI void glfwGetWindowFrameSize(GLFWwindow* window, int* left, int* top,
-                                    int* right, int* bottom);
+									int* right, int* bottom);
 
 /*! @brief Iconifies the specified window.
  *
@@ -2449,8 +2449,8 @@ GLFWAPI GLFWmonitor* glfwGetWindowMonitor(GLFWwindow* window);
  *  @ingroup window
  */
 GLFWAPI void glfwSetWindowMonitor(GLFWwindow* window, GLFWmonitor* monitor,
-                                  int xpos, int ypos, int width, int height,
-                                  int refreshRate);
+								  int xpos, int ypos, int width, int height,
+								  int refreshRate);
 
 /*! @brief Returns an attribute of the specified window.
  *
@@ -2552,7 +2552,7 @@ GLFWAPI void* glfwGetWindowUserPointer(GLFWwindow* window);
  *  @ingroup window
  */
 GLFWAPI GLFWwindowposfun glfwSetWindowPosCallback(GLFWwindow* window,
-                                                  GLFWwindowposfun cbfun);
+												  GLFWwindowposfun cbfun);
 
 /*! @brief Sets the size callback for the specified window.
  *
@@ -2578,7 +2578,7 @@ GLFWAPI GLFWwindowposfun glfwSetWindowPosCallback(GLFWwindow* window,
  *  @ingroup window
  */
 GLFWAPI GLFWwindowsizefun glfwSetWindowSizeCallback(GLFWwindow* window,
-                                                    GLFWwindowsizefun cbfun);
+													GLFWwindowsizefun cbfun);
 
 /*! @brief Sets the close callback for the specified window.
  *
@@ -2612,7 +2612,7 @@ GLFWAPI GLFWwindowsizefun glfwSetWindowSizeCallback(GLFWwindow* window,
  *  @ingroup window
  */
 GLFWAPI GLFWwindowclosefun glfwSetWindowCloseCallback(GLFWwindow* window,
-                                                      GLFWwindowclosefun cbfun);
+													  GLFWwindowclosefun cbfun);
 
 /*! @brief Sets the refresh callback for the specified window.
  *
@@ -2671,7 +2671,7 @@ glfwSetWindowRefreshCallback(GLFWwindow* window, GLFWwindowrefreshfun cbfun);
  *  @ingroup window
  */
 GLFWAPI GLFWwindowfocusfun glfwSetWindowFocusCallback(GLFWwindow* window,
-                                                      GLFWwindowfocusfun cbfun);
+													  GLFWwindowfocusfun cbfun);
 
 /*! @brief Sets the iconify callback for the specified window.
  *
@@ -2719,7 +2719,7 @@ glfwSetWindowIconifyCallback(GLFWwindow* window, GLFWwindowiconifyfun cbfun);
  *  @ingroup window
  */
 GLFWAPI GLFWframebuffersizefun glfwSetFramebufferSizeCallback(
-    GLFWwindow* window, GLFWframebuffersizefun cbfun);
+	GLFWwindow* window, GLFWframebuffersizefun cbfun);
 
 /*! @brief Processes all pending events.
  *
@@ -3185,7 +3185,7 @@ GLFWAPI void glfwSetCursorPos(GLFWwindow* window, double xpos, double ypos);
  *  @ingroup input
  */
 GLFWAPI GLFWcursor* glfwCreateCursor(const GLFWimage* image, int xhot,
-                                     int yhot);
+									 int yhot);
 
 /*! @brief Creates a cursor with a standard shape.
  *
@@ -3376,7 +3376,7 @@ GLFWAPI GLFWcharfun glfwSetCharCallback(GLFWwindow* window, GLFWcharfun cbfun);
  *  @ingroup input
  */
 GLFWAPI GLFWcharmodsfun glfwSetCharModsCallback(GLFWwindow* window,
-                                                GLFWcharmodsfun cbfun);
+												GLFWcharmodsfun cbfun);
 
 /*! @brief Sets the mouse button callback.
  *
@@ -3407,7 +3407,7 @@ GLFWAPI GLFWcharmodsfun glfwSetCharModsCallback(GLFWwindow* window,
  *  @ingroup input
  */
 GLFWAPI GLFWmousebuttonfun glfwSetMouseButtonCallback(GLFWwindow* window,
-                                                      GLFWmousebuttonfun cbfun);
+													  GLFWmousebuttonfun cbfun);
 
 /*! @brief Sets the cursor position callback.
  *
@@ -3433,7 +3433,7 @@ GLFWAPI GLFWmousebuttonfun glfwSetMouseButtonCallback(GLFWwindow* window,
  *  @ingroup input
  */
 GLFWAPI GLFWcursorposfun glfwSetCursorPosCallback(GLFWwindow* window,
-                                                  GLFWcursorposfun cbfun);
+												  GLFWcursorposfun cbfun);
 
 /*! @brief Sets the cursor enter/exit callback.
  *
@@ -3458,7 +3458,7 @@ GLFWAPI GLFWcursorposfun glfwSetCursorPosCallback(GLFWwindow* window,
  *  @ingroup input
  */
 GLFWAPI GLFWcursorenterfun glfwSetCursorEnterCallback(GLFWwindow* window,
-                                                      GLFWcursorenterfun cbfun);
+													  GLFWcursorenterfun cbfun);
 
 /*! @brief Sets the scroll callback.
  *
@@ -3486,7 +3486,7 @@ GLFWAPI GLFWcursorenterfun glfwSetCursorEnterCallback(GLFWwindow* window,
  *  @ingroup input
  */
 GLFWAPI GLFWscrollfun glfwSetScrollCallback(GLFWwindow* window,
-                                            GLFWscrollfun cbfun);
+											GLFWscrollfun cbfun);
 
 /*! @brief Sets the file drop callback.
  *
@@ -4133,7 +4133,7 @@ GLFWAPI const char** glfwGetRequiredInstanceExtensions(uint32_t* count);
  *  @ingroup vulkan
  */
 GLFWAPI GLFWvkproc glfwGetInstanceProcAddress(VkInstance instance,
-                                              const char* procname);
+											  const char* procname);
 
 /*! @brief Returns whether the specified queue family can present images.
  *
@@ -4167,8 +4167,8 @@ GLFWAPI GLFWvkproc glfwGetInstanceProcAddress(VkInstance instance,
  *  @ingroup vulkan
  */
 GLFWAPI int glfwGetPhysicalDevicePresentationSupport(VkInstance instance,
-                                                     VkPhysicalDevice device,
-                                                     uint32_t queuefamily);
+													 VkPhysicalDevice device,
+													 uint32_t queuefamily);
 
 /*! @brief Creates a Vulkan surface for the specified window.
  *
@@ -4219,9 +4219,9 @@ GLFWAPI int glfwGetPhysicalDevicePresentationSupport(VkInstance instance,
  *  @ingroup vulkan
  */
 GLFWAPI VkResult glfwCreateWindowSurface(VkInstance instance,
-                                         GLFWwindow* window,
-                                         const VkAllocationCallbacks* allocator,
-                                         VkSurfaceKHR* surface);
+										 GLFWwindow* window,
+										 const VkAllocationCallbacks* allocator,
+										 VkSurfaceKHR* surface);
 
 #endif /*VK_VERSION_1_0*/
 

@@ -32,7 +32,7 @@
 
 #pragma once
 #ifndef IMGUI_DISABLE
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 
 struct SDL_Renderer;
 
@@ -42,7 +42,7 @@ IMGUI_IMPL_API bool ImGui_ImplSDLRenderer2_Init(SDL_Renderer* renderer);
 IMGUI_IMPL_API void ImGui_ImplSDLRenderer2_Shutdown();
 IMGUI_IMPL_API void ImGui_ImplSDLRenderer2_NewFrame();
 IMGUI_IMPL_API void ImGui_ImplSDLRenderer2_RenderDrawData(
-    ImDrawData* draw_data, SDL_Renderer* renderer);
+	ImDrawData* draw_data, SDL_Renderer* renderer);
 
 // Called by Init/NewFrame/Shutdown
 IMGUI_IMPL_API void ImGui_ImplSDLRenderer2_CreateDeviceObjects();
@@ -58,7 +58,7 @@ IMGUI_IMPL_API void ImGui_ImplSDLRenderer2_UpdateTexture(ImTextureData* tex);
 // ImGui_ImplSDLRenderer2_RenderDrawData() call. (Please open an issue if you
 // feel you need access to more data)
 struct ImGui_ImplSDLRenderer2_RenderState {
-  SDL_Renderer* Renderer;
+	SDL_Renderer* Renderer;
 };
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

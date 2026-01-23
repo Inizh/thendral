@@ -13,33 +13,33 @@
 #include "../../backends/imgui_impl_null.h"
 
 int main(int, char**) {
-  IMGUI_CHECKVERSION();
+	IMGUI_CHECKVERSION();
 
-  ImGui::CreateContext();
-  ImGuiIO& io = ImGui::GetIO();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO();
 
-  ImGui_ImplNullPlatform_Init();
-  ImGui_ImplNullRender_Init();
+	ImGui_ImplNullPlatform_Init();
+	ImGui_ImplNullRender_Init();
 
-  for (int n = 0; n < 20; n++) {
-    printf("NewFrame() %d\n", n);
-    ImGui_ImplNullPlatform_NewFrame();
-    ImGui_ImplNullRender_NewFrame();
-    ImGui::NewFrame();
+	for (int n = 0; n < 20; n++) {
+		printf("NewFrame() %d\n", n);
+		ImGui_ImplNullPlatform_NewFrame();
+		ImGui_ImplNullRender_NewFrame();
+		ImGui::NewFrame();
 
-    static float f = 0.0f;
-    ImGui::Text("Hello, world!");
-    ImGui::SliderFloat("float", &f, 0.0f, 1.0f);
-    ImGui::Text("Application average %.3f ms/frame (%.1f FPS)",
-                1000.0f / io.Framerate, io.Framerate);
-    ImGui::ShowDemoWindow(nullptr);
+		static float f = 0.0f;
+		ImGui::Text("Hello, world!");
+		ImGui::SliderFloat("float", &f, 0.0f, 1.0f);
+		ImGui::Text("Application average %.3f ms/frame (%.1f FPS)",
+					1000.0f / io.Framerate, io.Framerate);
+		ImGui::ShowDemoWindow(nullptr);
 
-    ImGui::Render();
-  }
+		ImGui::Render();
+	}
 
-  printf("DestroyContext()\n");
-  ImGui_ImplNullRender_Shutdown();
-  ImGui_ImplNullPlatform_Shutdown();
-  ImGui::DestroyContext();
-  return 0;
+	printf("DestroyContext()\n");
+	ImGui_ImplNullRender_Shutdown();
+	ImGui_ImplNullPlatform_Shutdown();
+	ImGui::DestroyContext();
+	return 0;
 }

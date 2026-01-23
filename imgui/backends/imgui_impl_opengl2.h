@@ -33,7 +33,7 @@
 // don't exist in that API.
 
 #pragma once
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 #ifndef IMGUI_DISABLE
 
 // Follow "Getting Started" link and check examples/ folder to learn about using
@@ -52,4 +52,4 @@ IMGUI_IMPL_API void ImGui_ImplOpenGL2_DestroyDeviceObjects();
 // nullptr to handle this manually.
 IMGUI_IMPL_API void ImGui_ImplOpenGL2_UpdateTexture(ImTextureData* tex);
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

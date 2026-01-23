@@ -31,7 +31,7 @@
 
 #pragma once
 #ifndef IMGUI_DISABLE
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 
 // Follow "Getting Started" link and check examples/ folder to learn about using
 // backends!
@@ -48,16 +48,16 @@ IMGUI_IMPL_API void ImGui_ImplGLUT_NewFrame();
 IMGUI_IMPL_API void ImGui_ImplGLUT_ReshapeFunc(int w, int h);  // ~ ResizeFunc
 IMGUI_IMPL_API void ImGui_ImplGLUT_MotionFunc(int x, int y);  // ~ MouseMoveFunc
 IMGUI_IMPL_API void ImGui_ImplGLUT_MouseFunc(int button, int state, int x,
-                                             int y);  // ~ MouseButtonFunc
+											 int y);  // ~ MouseButtonFunc
 IMGUI_IMPL_API void ImGui_ImplGLUT_MouseWheelFunc(int button, int dir, int x,
-                                                  int y);  // ~ MouseWheelFunc
+												  int y);  // ~ MouseWheelFunc
 IMGUI_IMPL_API void ImGui_ImplGLUT_KeyboardFunc(unsigned char c, int x,
-                                                int y);  // ~ CharPressedFunc
+												int y);	 // ~ CharPressedFunc
 IMGUI_IMPL_API void ImGui_ImplGLUT_KeyboardUpFunc(unsigned char c, int x,
-                                                  int y);  // ~ CharReleasedFunc
+												  int y);  // ~ CharReleasedFunc
 IMGUI_IMPL_API void ImGui_ImplGLUT_SpecialFunc(int key, int x,
-                                               int y);  // ~ KeyPressedFunc
+											   int y);	// ~ KeyPressedFunc
 IMGUI_IMPL_API void ImGui_ImplGLUT_SpecialUpFunc(int key, int x,
-                                                 int y);  // ~ KeyReleasedFunc
+												 int y);  // ~ KeyReleasedFunc
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE

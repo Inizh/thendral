@@ -36,7 +36,7 @@
 // - Introduction, links and more at the top of imgui.cpp
 
 #pragma once
-#include "imgui.h"  // IMGUI_IMPL_API
+#include "imgui.h"	// IMGUI_IMPL_API
 #ifndef IMGUI_DISABLE
 
 struct GLFWwindow;
@@ -45,11 +45,11 @@ struct GLFWmonitor;
 // Follow "Getting Started" link and check examples/ folder to learn about using
 // backends!
 IMGUI_IMPL_API bool ImGui_ImplGlfw_InitForOpenGL(GLFWwindow* window,
-                                                 bool install_callbacks);
+												 bool install_callbacks);
 IMGUI_IMPL_API bool ImGui_ImplGlfw_InitForVulkan(GLFWwindow* window,
-                                                 bool install_callbacks);
+												 bool install_callbacks);
 IMGUI_IMPL_API bool ImGui_ImplGlfw_InitForOther(GLFWwindow* window,
-                                                bool install_callbacks);
+												bool install_callbacks);
 IMGUI_IMPL_API void ImGui_ImplGlfw_Shutdown();
 IMGUI_IMPL_API void ImGui_ImplGlfw_NewFrame();
 
@@ -57,7 +57,7 @@ IMGUI_IMPL_API void ImGui_ImplGlfw_NewFrame();
 // ImGui_ImplGlfw_InitForOpenGL)
 #ifdef __EMSCRIPTEN__
 IMGUI_IMPL_API void ImGui_ImplGlfw_InstallEmscriptenCallbacks(
-    GLFWwindow* window, const char* canvas_selector);
+	GLFWwindow* window, const char* canvas_selector);
 // static inline void ImGui_ImplGlfw_InstallEmscriptenCanvasResizeCallback(const
 // char* canvas_selector) { ImGui_ImplGlfw_InstallEmscriptenCallbacks(nullptr,
 // canvas_selector); } } // Renamed in 1.91.0
@@ -77,36 +77,36 @@ IMGUI_IMPL_API void ImGui_ImplGlfw_RestoreCallbacks(GLFWwindow* window);
 // - Set 'chain_for_all_windows=true' to enable chaining callbacks for all
 // windows (including secondary viewports created by backends or by user)
 IMGUI_IMPL_API void ImGui_ImplGlfw_SetCallbacksChainForAllWindows(
-    bool chain_for_all_windows);
+	bool chain_for_all_windows);
 
 // GLFW callbacks (individual callbacks to call yourself if you didn't install
 // callbacks)
 IMGUI_IMPL_API void ImGui_ImplGlfw_WindowFocusCallback(
-    GLFWwindow* window, int focused);  // Since 1.84
+	GLFWwindow* window, int focused);  // Since 1.84
 IMGUI_IMPL_API void ImGui_ImplGlfw_CursorEnterCallback(
-    GLFWwindow* window, int entered);  // Since 1.84
+	GLFWwindow* window, int entered);  // Since 1.84
 IMGUI_IMPL_API void ImGui_ImplGlfw_CursorPosCallback(GLFWwindow* window,
-                                                     double x,
-                                                     double y);  // Since 1.87
+													 double x,
+													 double y);	 // Since 1.87
 IMGUI_IMPL_API void ImGui_ImplGlfw_MouseButtonCallback(GLFWwindow* window,
-                                                       int button, int action,
-                                                       int mods);
+													   int button, int action,
+													   int mods);
 IMGUI_IMPL_API void ImGui_ImplGlfw_ScrollCallback(GLFWwindow* window,
-                                                  double xoffset,
-                                                  double yoffset);
+												  double xoffset,
+												  double yoffset);
 IMGUI_IMPL_API void ImGui_ImplGlfw_KeyCallback(GLFWwindow* window, int key,
-                                               int scancode, int action,
-                                               int mods);
+											   int scancode, int action,
+											   int mods);
 IMGUI_IMPL_API void ImGui_ImplGlfw_CharCallback(GLFWwindow* window,
-                                                unsigned int c);
+												unsigned int c);
 IMGUI_IMPL_API void ImGui_ImplGlfw_MonitorCallback(GLFWmonitor* monitor,
-                                                   int event);
+												   int event);
 
 // GLFW helpers
 IMGUI_IMPL_API void ImGui_ImplGlfw_Sleep(int milliseconds);
 IMGUI_IMPL_API float ImGui_ImplGlfw_GetContentScaleForWindow(
-    GLFWwindow* window);
+	GLFWwindow* window);
 IMGUI_IMPL_API float ImGui_ImplGlfw_GetContentScaleForMonitor(
-    GLFWmonitor* monitor);
+	GLFWmonitor* monitor);
 
-#endif  // #ifndef IMGUI_DISABLE
+#endif	// #ifndef IMGUI_DISABLE
