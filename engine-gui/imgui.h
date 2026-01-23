@@ -4387,7 +4387,7 @@ enum ImGuiTableColumnFlags_ {
 	ImGuiTableColumnFlags_NoDirectResize_ =
 		1
 		<< 30,	// [Internal] Disable user resizing this column directly (it may
-	// however we resized indirectly from its left edge)
+				// however we resized indirectly from its left edge)
 };
 
 // Flags for ImGui::TableNextRow()
@@ -7409,9 +7409,9 @@ struct ImFontGlyph {
 	float X0, Y0, X1,
 		Y1;	 // Glyph corners. Offsets from current cursor/layout position.
 	float U0, V0, U1,
-		V1;		 // Texture coordinates for the current value of
-				 // ImFontAtlas->TexRef. Cached equivalent of calling
-				 // GetCustomRect() with PackId.
+		V1;	 // Texture coordinates for the current value of
+			 // ImFontAtlas->TexRef. Cached equivalent of calling
+			 // GetCustomRect() with PackId.
 	int PackId;	 // [Internal] ImFontAtlasRectId value (FIXME: Cold data, could
 				 // be moved elsewhere?)
 
