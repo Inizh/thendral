@@ -1,0 +1,6 @@
+BasedOnStyle: Google
+
+# Use tabs instead of spaces
+UseTab: Always
+IndentWidth: 4
+TabWidth: 4

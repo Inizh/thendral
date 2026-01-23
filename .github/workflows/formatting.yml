@@ -1,6 +1,5 @@
 name: formatting
 
-
 on:
   push:
 permissions:
@@ -9,14 +8,12 @@ jobs:
   format:
     runs-on: ubuntu-latest
 
-    steps:      
-      
+    steps:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
-      
 
       - name: Install clang-format
         run: |
@@ -26,8 +23,7 @@ jobs:
       - name: Run clang-format
         run: |
           find . \( -name "*.cpp" -o -name "*.h" \) \
-            -print0 | xargs -0 clang-format -style=Google -i
-
+            -print0 | xargs -0 clang-format -i
 
       - name: Commit format changes
         uses: stefanzweifel/git-auto-commit-action@v5
