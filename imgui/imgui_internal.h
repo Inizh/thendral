@@ -1535,16 +1535,16 @@ struct IMGUI_API ImDrawListSharedData {
 	float FontSize;	  // Current font size (used for for simplified AddText
 					  // overload)
 	float FontScale;  // Current font scale (== FontSize / Font->FontSize)
-	float CurveTessellationTol;	  // Tessellation tolerance when using
-								  // PathBezierCurveTo()
-	float CircleSegmentMaxError;  // Number of circle segments to use per pixel
-								  // of radius for AddCircle() etc
+	float CurveTessellationTol;	   // Tessellation tolerance when using
+								   // PathBezierCurveTo()
+	float CircleSegmentMaxError;   // Number of circle segments to use per pixel
+								   // of radius for AddCircle() etc
 	float InitialFringeScale;	   // Initial scale to apply to AA fringe
 	ImDrawListFlags InitialFlags;  // Initial flags at the beginning of the
 								   // frame (it is possible to alter flags on a
 								   // per-drawlist basis afterwards)
-	ImVec4 ClipRectFullscreen;	  // Value for PushClipRectFullscreen()
-	ImVector<ImVec2> TempBuffer;  // Temporary write buffer
+	ImVec4 ClipRectFullscreen;	   // Value for PushClipRectFullscreen()
+	ImVector<ImVec2> TempBuffer;   // Temporary write buffer
 	ImVector<ImDrawList*>
 		DrawLists;	// All draw lists associated to this ImDrawListSharedData
 	ImGuiContext*
@@ -2079,7 +2079,7 @@ struct IMGUI_API ImGuiInputTextState {
 	int BufCapacity;  // end-user buffer capacity (include zero terminator)
 	ImVec2 Scroll;	// horizontal offset (managed manually) + vertical scrolling
 					// (pulled from child window's own Scroll.y)
-	int LineCount;	// last line count (solely for debugging)
+	int LineCount;		// last line count (solely for debugging)
 	float WrapWidth;	// word-wrapping width
 	float CursorAnim;	// timer for cursor blink, reset on every user action so
 						// the cursor reappears immediately
@@ -2263,8 +2263,8 @@ struct ImGuiLastItemData {
 	ImRect DisplayRect;	 // Display rectangle. ONLY VALID IF (StatusFlags &
 						 // ImGuiItemStatusFlags_HasDisplayRect) is set.
 	ImRect ClipRect;	 // Clip rectangle at the time of submitting item. ONLY
-					  // VALID IF (StatusFlags &
-					  // ImGuiItemStatusFlags_HasClipRect) is set..
+						 // VALID IF (StatusFlags &
+						 // ImGuiItemStatusFlags_HasClipRect) is set..
 	ImGuiKeyChord
 		Shortcut;  // Shortcut at the time of submitting item. ONLY VALID IF
 				   // (StatusFlags & ImGuiItemStatusFlags_HasShortcut) is set..
@@ -2365,7 +2365,7 @@ struct ImGuiPopupData {
 						 // type (declared down below), initialized to -1 which
 						 // is not part of an enum, but serves well-enough as
 						 // "not any of layers" value
-	int OpenFrameCount;	   // Set on OpenPopup()
+	int OpenFrameCount;	 // Set on OpenPopup()
 	ImGuiID OpenParentId;  // Set on OpenPopup(), we need this to differentiate
 						   // multiple menu sets from each others (e.g. inside
 						   // menu bar vs loose menu items)
@@ -2579,14 +2579,14 @@ enum ImGuiInputFlagsPrivate_ {
 			   // default behavior.
 	ImGuiInputFlags_RepeatUntilKeyModsChange =
 		1 << 5,	 // Stop repeating when released OR if keyboard mods are changed
-				 // (default for Shortcut)
+	// (default for Shortcut)
 	ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone =
 		1 << 6,	 // Stop repeating when released OR if keyboard mods are leaving
-				 // the
+	// the
 	// None state. Allows going from Mod+Key to Key by releasing Mod.
 	ImGuiInputFlags_RepeatUntilOtherKeyPress =
 		1 << 7,	 // Stop repeating when released OR if any other keyboard key is
-				 // pressed during the repeat
+	// pressed during the repeat
 
 	// Flags for SetKeyOwner(), SetItemKeyOwner()
 	// - Locking key away from non-input aware code. Locking is useful to make
@@ -2654,8 +2654,8 @@ enum ImGuiInputFlagsPrivate_ {
 struct ImGuiListClipperRange {
 	int Min;
 	int Max;
-	bool PosToIndexConvert;	 // Begin/End are absolute position (will be
-							 // converted to indices later)
+	bool PosToIndexConvert;	   // Begin/End are absolute position (will be
+							   // converted to indices later)
 	ImS8 PosToIndexOffsetMin;  // Add to Min after converting to indices
 	ImS8 PosToIndexOffsetMax;  // Add to Min after converting to indices
 
@@ -2828,7 +2828,7 @@ struct ImGuiNavItemData {
 	ImGuiWindow*
 		Window;	 // Init,Move    // Best candidate window
 				 // (result->ItemWindow->RootWindowForNav == request->Window)
-	ImGuiID ID;	 // Init,Move    // Best candidate item ID
+	ImGuiID ID;			   // Init,Move    // Best candidate item ID
 	ImGuiID FocusScopeId;  // Init,Move    // Best candidate focus scope ID
 	ImRect RectRel;	 // Init,Move    // Best candidate bounding box in window
 					 // relative space
@@ -2838,7 +2838,7 @@ struct ImGuiNavItemData {
 	float DistCenter;  //      Move    // Best candidate center distance to
 					   //      current NavId
 	float DistAxial;   //      Move    // Best candidate axial distance to
-					  //      current NavId
+					   //      current NavId
 	ImGuiSelectionUserData
 		SelectionUserData;	// I+Mov    // Best candidate
 							// SetNextItemSelectionUserData() value. Valid if
@@ -2883,8 +2883,8 @@ struct IMGUI_API ImGuiTypingSelectRequest {
 	const char* SearchBuffer;  // Search buffer contents (use full string.
 							   // unless SingleCharMode is set, in which case
 							   // use SingleCharSize).
-	bool SelectRequest;	 // Set when buffer was modified this frame, requesting
-						 // a selection.
+	bool SelectRequest;	  // Set when buffer was modified this frame, requesting
+						  // a selection.
 	bool SingleCharMode;  // Notify when buffer contains same character
 						  // repeated, to implement special mode. In this
 						  // situation it preferred to not display any on-screen
@@ -3385,10 +3385,10 @@ struct ImGuiStackLevelInfo {
 struct ImGuiDebugItemPathQuery {
 	ImGuiID MainID;	 // ID to query details for.
 	bool Active;	 // Used to disambiguate the case when ID == 0 and e.g. some
-				  // code calls PushOverrideID(0).
-	bool Complete;	// All sub-queries are finished (some may have failed).
-	ImS8 Step;		// -1: query stack + init Results, >= 0: filling individual
-				// stack level.
+					 // code calls PushOverrideID(0).
+	bool Complete;	 // All sub-queries are finished (some may have failed).
+	ImS8 Step;		 // -1: query stack + init Results, >= 0: filling individual
+					 // stack level.
 	ImVector<ImGuiStackLevelInfo> Results;
 	ImGuiTextBuffer ResultsDescBuf;
 	ImGuiTextBuffer ResultPathBuf;
@@ -3464,7 +3464,7 @@ struct ImGuiContext {
 	ImVector<ImFontAtlas*>
 		FontAtlases;  // List of font atlases used by the context (generally
 					  // only contains g.IO.Fonts aka the main font atlas)
-	ImFont* Font;			 // Currently bound font. (== FontStack.back().Font)
+	ImFont* Font;	  // Currently bound font. (== FontStack.back().Font)
 	ImFontBaked* FontBaked;	 // Currently bound font at currently bound size.
 							 // (== Font->GetFontBaked(FontSize))
 	float
@@ -3552,7 +3552,7 @@ struct ImGuiContext {
 	ImGuiID HoveredIdPreviousFrame;
 	int HoveredIdPreviousFrameItemCount;  // Count numbers of items using the
 										  // same ID as last frame's hovered id
-	float HoveredIdTimer;			// Measure contiguous hovering time
+	float HoveredIdTimer;				  // Measure contiguous hovering time
 	float HoveredIdNotActiveTimer;	// Measure contiguous hovering time where
 									// the item has not been active
 	bool HoveredIdAllowOverlap;
@@ -3563,8 +3563,8 @@ struct ImGuiContext {
 							   // memory-locality friendly copy of LogEnabled
 	ImGuiID ActiveId;		   // Active widget
 	ImGuiID ActiveIdIsAlive;   // Active widget has been seen this frame (we
-							  // can't use a bool as the ActiveId may change
-							  // within the frame)
+							   // can't use a bool as the ActiveId may change
+							   // within the frame)
 	float ActiveIdTimer;
 	bool
 		ActiveIdIsJustActivated;  // Set at the time of activation for one frame
@@ -3648,9 +3648,9 @@ struct ImGuiContext {
 	// g.ActiveId) and/or SetKeyOwner(ImGuiKey_NavGamepadCancel, g.ActiveId);'
 
 	// Next window/item data
-	ImGuiID CurrentFocusScopeId;  // Value for currently appending items ==
-								  // g.FocusScopeStack.back(). Not to be
-								  // mistaken with g.NavFocusScopeId.
+	ImGuiID CurrentFocusScopeId;	  // Value for currently appending items ==
+									  // g.FocusScopeStack.back(). Not to be
+									  // mistaken with g.NavFocusScopeId.
 	ImGuiItemFlags CurrentItemFlags;  // Value for currently appending items ==
 									  // g.ItemFlagsStack.back()
 	ImGuiID DebugLocateId;	// Storage for DebugLocateItemOnHover() feature:
@@ -3718,7 +3718,7 @@ struct ImGuiContext {
 							  // wants to "clear other items" when landing on an
 							  // item of the same scope)
 	ImGuiNavLayer NavLayer;	  // Focused layer (main scrolling layer, or
-							 // menu/title bar layer)
+							  // menu/title bar layer)
 	ImGuiID
 		NavActivateId;	// ~~ (g.ActiveId == 0) && (IsKeyPressed(ImGuiKey_Space)
 						// || IsKeyDown(ImGuiKey_Enter) ||
@@ -3758,16 +3758,16 @@ struct ImGuiContext {
 	// c9a53aa74, issue #5606.
 
 	// Navigation: Init & Move Requests
-	bool NavAnyRequest;	 // ~~ NavMoveRequest || NavInitRequest this is to
-						 // perform early out in ItemAdd()
+	bool NavAnyRequest;	  // ~~ NavMoveRequest || NavInitRequest this is to
+						  // perform early out in ItemAdd()
 	bool NavInitRequest;  // Init request for appearing window to select first
 						  // item
 	bool NavInitRequestFromMove;
 	ImGuiNavItemData
 		NavInitResult;	// Init request result (first item of the window, or one
 						// for which SetItemDefaultFocus() was called)
-	bool NavMoveSubmitted;	// Move request submitted, will process result on
-							// next NewFrame()
+	bool NavMoveSubmitted;	   // Move request submitted, will process result on
+							   // next NewFrame()
 	bool NavMoveScoringItems;  // Move request submitted, still scoring incoming
 							   // items
 	bool NavMoveForwardToNextFrame;
@@ -3779,8 +3779,8 @@ struct ImGuiContext {
 	ImGuiDir NavMoveClipDir;  // FIXME-NAV: Describe the purpose of this better.
 							  // Might want to rename?
 	ImRect NavScoringRect;	  // Rectangle used for scoring, in screen space.
-							// Based of window->NavRectRel[], modified for
-							// directional navigation scoring.
+							  // Based of window->NavRectRel[], modified for
+							  // directional navigation scoring.
 	ImRect
 		NavScoringNoClipRect;  // Some nav operations (such as PageUp/PageDown)
 							   // enforce a region which clipper will attempt
@@ -3974,9 +3974,9 @@ struct ImGuiContext {
 	float
 		ColorEditSavedHue;	// Backup of last Hue associated to LastColor, so we
 							// can restore Hue in lossy RGB<>HSV round trips
-	float ColorEditSavedSat;  // Backup of last Saturation associated to
-							  // LastColor, so we can restore Saturation in
-							  // lossy RGB<>HSV round trips
+	float ColorEditSavedSat;	// Backup of last Saturation associated to
+								// LastColor, so we can restore Saturation in
+								// lossy RGB<>HSV round trips
 	ImU32 ColorEditSavedColor;	// RGB value with alpha set to 0.
 	ImVec4 ColorPickerRef;	// Initial/reference color at the time of opening
 							// the color picker.
@@ -4155,9 +4155,9 @@ struct IMGUI_API ImGuiWindowTempData {
 	ImVec2 CursorPosPrevLine;
 	ImVec2 CursorStartPos;	// Initial position after Begin(), generally ~
 							// window position + WindowPadding.
-	ImVec2 CursorMaxPos;  // Used to implicitly calculate ContentSize at the
-						  // beginning of next frame, for scrolling range and
-						  // auto-resize. Always growing during the frame.
+	ImVec2 CursorMaxPos;	// Used to implicitly calculate ContentSize at the
+							// beginning of next frame, for scrolling range and
+							// auto-resize. Always growing during the frame.
 	ImVec2 IdealMaxPos;	 // Used to implicitly calculate ContentSizeIdeal at the
 						 // beginning of next frame, for auto-resize only.
 						 // Always growing during the frame.
@@ -4185,8 +4185,8 @@ struct IMGUI_API ImGuiWindowTempData {
 	// Keyboard/Gamepad navigation
 	ImGuiNavLayer
 		NavLayerCurrent;  // Current layer, 0..31 (we currently only use 0..1)
-	short NavLayersActiveMask;	// Which layers have been written to (result
-								// from previous frame)
+	short NavLayersActiveMask;		// Which layers have been written to (result
+									// from previous frame)
 	short NavLayersActiveMaskNext;	// Which layers have been written to
 									// (accumulator for current frame)
 	bool
@@ -4288,9 +4288,9 @@ struct IMGUI_API ImGuiWindow {
 						  // Tables as they use specialized form of clipping and
 						  // frozen rows/columns are inside InnerRect (and not
 						  // part of regular decoration sizes).
-	int NameBufLen;	 // Size of buffer storing Name. May be larger than
-					 // strlen(Name)!
-	ImGuiID MoveId;	 // == window->GetID("#MOVE")
+	int NameBufLen;		  // Size of buffer storing Name. May be larger than
+						  // strlen(Name)!
+	ImGuiID MoveId;		  // == window->GetID("#MOVE")
 	ImGuiID
 		ChildId;  // ID of corresponding item in parent window (for navigation
 				  // to return from child window to parent window)
@@ -4323,8 +4323,8 @@ struct IMGUI_API ImGuiWindow {
 		WriteAccessed;	// Set to true when any widget access the current window
 	bool Collapsed;		// Set when collapsing window to become only title-bar
 	bool WantCollapseToggle;
-	bool SkipItems;	 // Set when items can safely be all clipped (e.g. window
-					 // not visible or collapsed)
+	bool SkipItems;	   // Set when items can safely be all clipped (e.g. window
+					   // not visible or collapsed)
 	bool SkipRefresh;  // [EXPERIMENTAL] Reuse previous frame drawn contents,
 					   // Begin() returns false.
 	bool Appearing;	   // Set during the frame where the window is appearing (or
@@ -4359,24 +4359,24 @@ struct IMGUI_API ImGuiWindow {
 	ImS8 HiddenFramesCannotSkipItems;  // Hide the window for N frames while
 									   // allowing items to be submitted so we
 									   // can measure their size
-	ImS8 HiddenFramesForRenderOnly;	 // Hide the window until frame N at
-									 // Render() time only
+	ImS8 HiddenFramesForRenderOnly;	   // Hide the window until frame N at
+									   // Render() time only
 	ImS8 DisableInputsFrames;  // Disable window interactions for N frames
 	ImGuiWindowBgClickFlags
 		BgClickFlags : 8;  // Configure behavior of click+dragging on window
 						   // bg/void or over items. Default sets by
 						   // io.ConfigWindowsMoveFromTitleBarOnly. If you use
 						   // this please report in #3379.
-	ImGuiCond SetWindowPosAllowFlags : 8;  // store acceptable condition flags
-										   // for SetNextWindowPos() use.
+	ImGuiCond SetWindowPosAllowFlags : 8;	// store acceptable condition flags
+											// for SetNextWindowPos() use.
 	ImGuiCond SetWindowSizeAllowFlags : 8;	// store acceptable condition flags
 											// for SetNextWindowSize() use.
 	ImGuiCond
 		SetWindowCollapsedAllowFlags : 8;  // store acceptable condition flags
 										   // for SetNextWindowCollapsed() use.
-	ImVec2 SetWindowPosVal;	 // store window position when using a non-zero
-							 // Pivot (position set needs to be processed when
-							 // we know the window size)
+	ImVec2 SetWindowPosVal;	   // store window position when using a non-zero
+							   // Pivot (position set needs to be processed when
+							   // we know the window size)
 	ImVec2 SetWindowPosPivot;  // store window pivot for positioning. ImVec2(0,
 							   // 0) when positioning from top-left corner;
 							   // ImVec2(0.5f, 0.5f) for centering; ImVec2(1, 1)
@@ -4385,7 +4385,7 @@ struct IMGUI_API ImGuiWindow {
 	ImVector<ImGuiID> IDStack;	// ID stack. ID are hashes seeded with the value
 								// at the top of the stack. (In theory this
 								// should be in the TempData structure)
-	ImGuiWindowTempData DC;	 // Temporary per-window data, reset at the
+	ImGuiWindowTempData DC;		// Temporary per-window data, reset at the
 							 // beginning of the frame. This used to be called
 							 // ImGuiDrawContext, hence the "DC" variable name.
 
@@ -4467,8 +4467,8 @@ struct IMGUI_API ImGuiWindow {
 								// child window.)
 	ImGuiID NavLastIds[ImGuiNavLayer_COUNT];  // Last known NavId for this
 											  // window, per layer (0/1)
-	ImRect NavRectRel[ImGuiNavLayer_COUNT];	 // Reference rectangle, in window
-											 // relative space
+	ImRect NavRectRel[ImGuiNavLayer_COUNT];	  // Reference rectangle, in window
+											  // relative space
 	ImVec2 NavPreferredScoringPosRel
 		[ImGuiNavLayer_COUNT];	// Preferred X/Y position updated when moving on
 								// a given axis, reset to FLT_MAX.
@@ -4549,21 +4549,21 @@ struct ImGuiTabItem {
 	int LastFrameVisible;
 	int LastFrameSelected;	// This allows us to infer an ordered list of the
 							// last activated tabs with little maintenance
-	float Offset;		 // Position relative to beginning of tab
-	float Width;		 // Width currently displayed
-	float ContentWidth;	 // Width of label + padding, stored during
-						 // BeginTabItem() call (misnamed as "Content" would
-						 // normally imply width of label only)
-	float RequestedWidth;  // Width optionally requested by caller, -1.0f is
-						   // unused
-	ImS32 NameOffset;	   // When Window==NULL, offset to name within parent
-						   // ImGuiTabBar::TabsNames
-	ImS16 BeginOrder;	   // BeginTabItem() order, used to re-order tabs after
-						   // toggling ImGuiTabBarFlags_Reorderable
+	float Offset;			// Position relative to beginning of tab
+	float Width;			// Width currently displayed
+	float ContentWidth;		// Width of label + padding, stored during
+							// BeginTabItem() call (misnamed as "Content" would
+							// normally imply width of label only)
+	float RequestedWidth;	// Width optionally requested by caller, -1.0f is
+							// unused
+	ImS32 NameOffset;		// When Window==NULL, offset to name within parent
+							// ImGuiTabBar::TabsNames
+	ImS16 BeginOrder;		// BeginTabItem() order, used to re-order tabs after
+							// toggling ImGuiTabBarFlags_Reorderable
 	ImS16 IndexDuringLayout;  // Index only used during TabBarLayout(). Tabs
 							  // gets reordered so 'Tabs[n].IndexDuringLayout ==
 							  // n' but may mismatch during additions.
-	bool WantClose;	 // Marked as closed by SetTabItemClosed()
+	bool WantClose;			  // Marked as closed by SetTabItemClosed()
 
 	ImGuiTabItem() {
 		memset(this, 0, sizeof(*this));
@@ -4651,7 +4651,7 @@ struct ImGuiTableColumn {
 					   // TableUpdateLayout(). May be > WidthRequest to honor
 					   // minimum width, may be < WidthRequest to honor
 					   // shrinking columns down in tight space.
-	float MinX;	 // Absolute positions
+	float MinX;		   // Absolute positions
 	float MaxX;
 	float WidthRequest;	  // Master width absolute value when !(Flags &
 						  // _WidthStretch). When Stretch this is derived every
@@ -4716,8 +4716,8 @@ struct ImGuiTableColumn {
 	bool IsRequestOutput;  // Return value for TableSetColumnIndex() /
 						   // TableNextColumn(): whether we request user to
 						   // output contents or not.
-	bool IsSkipItems;  // Do we want item submissions to this column to be
-					   // completely ignored (no layout will happen).
+	bool IsSkipItems;	   // Do we want item submissions to this column to be
+						   // completely ignored (no layout will happen).
 	bool IsPreserveWidthAuto;
 	ImS8 NavLayerCurrent;  // ImGuiNavLayer in 1 byte
 	ImU8 AutoFitQueue;	   // Queue of 8 values for the next 8 frames to request
@@ -4728,8 +4728,8 @@ struct ImGuiTableColumn {
 								// ImGuiSortDirection_Descending
 	ImU8 SortDirectionsAvailCount : 2;	// Number of available sort directions
 										// (0 to 3)
-	ImU8 SortDirectionsAvailMask : 4;  // Mask of available sort directions
-									   // (1-bit each)
+	ImU8 SortDirectionsAvailMask : 4;	// Mask of available sort directions
+										// (1-bit each)
 	ImU8 SortDirectionsAvailList;  // Ordered list of available sort directions
 								   // (2-bits each, total 8-bits)
 
@@ -4772,10 +4772,10 @@ struct ImGuiTableInstanceData {
 									// from last frame (FIXME: this is used
 									// assuming consecutive headers are in same
 									// frozen set)
-	float LastFrozenHeight;	 // Height of frozen section from last frame
-	int HoveredRowLast;		 // Index of row which was hovered last frame.
-	int HoveredRowNext;		 // Index of row hovered this frame, set after
-							 // encountering it.
+	float LastFrozenHeight;			// Height of frozen section from last frame
+	int HoveredRowLast;	 // Index of row which was hovered last frame.
+	int HoveredRowNext;	 // Index of row hovered this frame, set after
+						 // encountering it.
 
 	ImGuiTableInstanceData() {
 		TableInstanceID = 0;
@@ -4790,8 +4790,8 @@ struct IMGUI_API ImGuiTable {
 	ImGuiTableFlags Flags;
 	void* RawData;	// Single allocation to hold Columns[],
 					// DisplayOrderToIndex[], and RowCellData[]
-	ImGuiTableTempData* TempData;  // Transient data while table is active.
-								   // Point within g.CurrentTableStack[]
+	ImGuiTableTempData* TempData;	   // Transient data while table is active.
+									   // Point within g.CurrentTableStack[]
 	ImSpan<ImGuiTableColumn> Columns;  // Point within RawData[]
 	ImSpan<ImGuiTableColumnIdx>
 		DisplayOrderToIndex;  // Point within RawData[]. Store display order of

@@ -8879,8 +8879,8 @@ static void DemoWindowTables() {
 										  // ImGuiTableColumnFlags_AngledHeader
 										  // flag.
 			ImGui::TableHeadersRow();	  // Draw remaining headers and allow
-									   // access to context-menu and other
-									   // functions.
+										  // access to context-menu and other
+										  // functions.
 			for (int row = 0; row < rows_count; row++) {
 				ImGui::PushID(row);
 				ImGui::TableNextRow();

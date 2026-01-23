@@ -2734,8 +2734,8 @@ ImGuiStyle::ImGuiStyle() {
 	WindowMinSize = ImVec2(32, 32);			// Minimum window size
 	WindowTitleAlign = ImVec2(0.0f, 0.5f);	// Alignment for title bar text
 	WindowMenuButtonPosition =
-		ImGuiDir_Left;	// Position of the collapsing/docking button in the
-						// title bar (left/right). Defaults to ImGuiDir_Left.
+		ImGuiDir_Left;	   // Position of the collapsing/docking button in the
+						   // title bar (left/right). Defaults to ImGuiDir_Left.
 	ChildRounding = 0.0f;  // Radius of child window corners rounding. Set to
 						   // 0.0f to have rectangular child windows
 	ChildBorderSize =
@@ -2774,17 +2774,17 @@ ImGuiStyle::ImGuiStyle() {
 							   // horizontal scrollbar
 	ScrollbarRounding = 9.0f;  // Radius of grab corners rounding for scrollbar
 	ScrollbarPadding = 2.0f;   // Padding of scrollbar grab within its frame
-							  // (same for both axises)
+							   // (same for both axises)
 	GrabMinSize =
 		12.0f;	// Minimum width/height of a grab box for slider/scrollbar
 	GrabRounding = 0.0f;  // Radius of grabs corners rounding. Set to 0.0f to
 						  // have rectangular slider grabs.
 	LogSliderDeadzone = 4.0f;  // The size in pixels of the dead-zone around
 							   // zero on logarithmic sliders that cross zero.
-	ImageRounding = 0.0f;	 // Rounding of Image() calls.
-	ImageBorderSize = 0.0f;	 // Thickness of border around tabs.
+	ImageRounding = 0.0f;	   // Rounding of Image() calls.
+	ImageBorderSize = 0.0f;	   // Thickness of border around tabs.
 	TabRounding = 5.0f;		 // Radius of upper corners of a tab. Set to 0.0f to
-						 // have rectangular tabs.
+							 // have rectangular tabs.
 	TabBorderSize = 0.0f;	 // Thickness of border around tabs.
 	TabMinWidthBase = 1.0f;	 // Minimum tab width, to make tabs larger than
 							 // their contents. TabBar buttons are not affected.
@@ -13132,7 +13132,7 @@ static ImGuiWindow* FindBestWheelingWindow(const ImVec2& wheel) {
 				// - a child window has the ImGuiWindowFlags_NoScrollWithMouse
 				// flag.
 				//// - a child window doesn't need scrolling because it is
-				///already at the edge for the direction we are going in
+				/// already at the edge for the direction we are going in
 				/// (FIXME-WIP)
 				const bool has_scrolling = (window->ScrollMax[axis] != 0.0f);
 				const bool inputs_disabled =

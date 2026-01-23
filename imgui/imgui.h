@@ -2749,7 +2749,7 @@ enum ImGuiInputTextFlags_ {
 			   // IsItemDeactivatedAfterEdit() instead!
 	ImGuiInputTextFlags_EscapeClearsAll =
 		1 << 7,	 // Escape key clears content if not empty, and deactivate
-				 // otherwise (contrast to default behavior of Escape to revert)
+	// otherwise (contrast to default behavior of Escape to revert)
 	ImGuiInputTextFlags_CtrlEnterForNewLine =
 		1 << 8,	 // In multi-line mode, validate with Enter, add new line with
 	// Ctrl+Enter (default is opposite: validate with Ctrl+Enter, add
@@ -3301,7 +3301,7 @@ enum ImGuiDataType_ {
 	ImGuiDataType_Float,   // float
 	ImGuiDataType_Double,  // double
 	ImGuiDataType_Bool,	   // bool (provided for user convenience, not supported
-						 // by scalar widgets)
+						   // by scalar widgets)
 	ImGuiDataType_String,  // char* (provided for user convenience, not
 						   // supported by scalar widgets)
 	ImGuiDataType_COUNT
@@ -3478,10 +3478,10 @@ enum ImGuiKey : int {
 								// Close / Exit
 	ImGuiKey_GamepadFaceUp,	 // Y           | X       | Triangle | Text Input /
 							 // On-screen Keyboard
-	ImGuiKey_GamepadFaceDown,  // A           | B       | Cross    | Activate /
-							   // Open / Toggle / Tweak
-	ImGuiKey_GamepadDpadLeft,  // D-pad Left  | "       | "        | Move /
-							   // Tweak / Resize Window (in Windowing mode)
+	ImGuiKey_GamepadFaceDown,	// A           | B       | Cross    | Activate /
+								// Open / Toggle / Tweak
+	ImGuiKey_GamepadDpadLeft,	// D-pad Left  | "       | "        | Move /
+								// Tweak / Resize Window (in Windowing mode)
 	ImGuiKey_GamepadDpadRight,	// D-pad Right | "       | "        | Move /
 								// Tweak / Resize Window (in Windowing mode)
 	ImGuiKey_GamepadDpadUp,	 // D-pad Up    | "       | "        | Move / Tweak
@@ -3501,7 +3501,7 @@ enum ImGuiKey : int {
 	ImGuiKey_GamepadLStickRight,  //             |         |          | [Analog]
 								  //             Move Window (in Windowing mode)
 	ImGuiKey_GamepadLStickUp,	  //             |         |          | [Analog]
-							   //             Move Window (in Windowing mode)
+								  //             Move Window (in Windowing mode)
 	ImGuiKey_GamepadLStickDown,	  //             |         |          | [Analog]
 								  //             Move Window (in Windowing mode)
 	ImGuiKey_GamepadRStickLeft,	  //             |         |          | [Analog]
@@ -3748,7 +3748,7 @@ enum ImGuiCol_ {
 	ImGuiCol_TabDimmedSelected,	 // Tab background, when tab-bar is unfocused &
 								 // tab is selected
 	ImGuiCol_TabDimmedSelectedOverline,	 //..horizontal overline, when tab-bar
-										 //is unfocused & tab is selected
+										 // is unfocused & tab is selected
 	ImGuiCol_PlotLines,
 	ImGuiCol_PlotLinesHovered,
 	ImGuiCol_PlotHistogram,
@@ -3770,7 +3770,7 @@ enum ImGuiCol_ {
 	ImGuiCol_UnsavedMarker,		 // Unsaved Document marker (in window title and
 								 // tabs)
 	ImGuiCol_NavCursor,			 // Color of keyboard/gamepad navigation
-						 // cursor/rectangle, when visible
+								 // cursor/rectangle, when visible
 	ImGuiCol_NavWindowingHighlight,	 // Highlight window when using Ctrl+Tab
 	ImGuiCol_NavWindowingDimBg,		 // Darken/colorize entire screen behind the
 									 // Ctrl+Tab window list, when active
@@ -4170,7 +4170,7 @@ enum ImGuiTableFlags_ {
 	ImGuiTableFlags_Resizable = 1 << 0,	 // Enable resizing columns.
 	ImGuiTableFlags_Reorderable =
 		1 << 1,	 // Enable reordering columns in header row (need calling
-				 // TableSetupColumn() + TableHeadersRow() to display headers)
+	// TableSetupColumn() + TableHeadersRow() to display headers)
 	ImGuiTableFlags_Hideable =
 		1 << 2,	 // Enable hiding/disabling columns in context menu.
 	ImGuiTableFlags_Sortable =
@@ -4180,7 +4180,7 @@ enum ImGuiTableFlags_ {
 			   // ImGuiTableFlags_SortTristate.
 	ImGuiTableFlags_NoSavedSettings =
 		1 << 4,	 // Disable persisting columns order, width, visibility and sort
-				 // settings in the .ini file.
+	// settings in the .ini file.
 	ImGuiTableFlags_ContextMenuInBody =
 		1 << 5,	 // Right-click on columns body/contents will display table
 	// context menu. By default it is available in TableHeadersRow().
@@ -4304,8 +4304,8 @@ enum ImGuiTableColumnFlags_ {
 	ImGuiTableColumnFlags_None = 0,
 	ImGuiTableColumnFlags_Disabled =
 		1 << 0,	 // Overriding/master disable flag: hide column, won't show in
-				 // context menu (unlike calling TableSetColumnEnabled() which
-				 // manipulates the user accessible state)
+	// context menu (unlike calling TableSetColumnEnabled() which
+	// manipulates the user accessible state)
 	ImGuiTableColumnFlags_DefaultHide =
 		1 << 1,	 // Default as a hidden/disabled column.
 	ImGuiTableColumnFlags_DefaultSort = 1 << 2,	 // Default as a sorting column.
@@ -4327,10 +4327,10 @@ enum ImGuiTableColumnFlags_ {
 		1 << 7,	 // Disable ability to hide/disable this column.
 	ImGuiTableColumnFlags_NoClip =
 		1 << 8,	 // Disable clipping for this column (all NoClip columns will
-				 // render in a same draw command).
+	// render in a same draw command).
 	ImGuiTableColumnFlags_NoSort =
 		1 << 9,	 // Disable ability to sort on this field (even if
-				 // ImGuiTableFlags_Sortable is set on the table).
+	// ImGuiTableFlags_Sortable is set on the table).
 	ImGuiTableColumnFlags_NoSortAscending =
 		1 << 10,  // Disable ability to sort in the ascending direction.
 	ImGuiTableColumnFlags_NoSortDescending =
@@ -4387,7 +4387,7 @@ enum ImGuiTableColumnFlags_ {
 	ImGuiTableColumnFlags_NoDirectResize_ =
 		1
 		<< 30,	// [Internal] Disable user resizing this column directly (it may
-				// however we resized indirectly from its left edge)
+	// however we resized indirectly from its left edge)
 };
 
 // Flags for ImGui::TableNextRow()
@@ -4780,10 +4780,10 @@ struct ImGuiStyle {
 						 // io.ConfigDpiScaleFonts is enabled, this is
 						 // automatically overwritten when changing monitor DPI.
 
-	float Alpha;		  // Global alpha applies to everything in Dear ImGui.
-	float DisabledAlpha;  // Additional alpha multiplier applied by
-						  // BeginDisabled(). Multiply over current value of
-						  // Alpha.
+	float Alpha;		   // Global alpha applies to everything in Dear ImGui.
+	float DisabledAlpha;   // Additional alpha multiplier applied by
+						   // BeginDisabled(). Multiply over current value of
+						   // Alpha.
 	ImVec2 WindowPadding;  // Padding within a window.
 	float
 		WindowRounding;	 // Radius of window corners rounding. Set to 0.0f to
@@ -4807,8 +4807,8 @@ struct ImGuiStyle {
 	ImGuiDir WindowMenuButtonPosition;	// Side of the collapsing/docking button
 										// in the title bar (None/Left/Right).
 										// Defaults to ImGuiDir_Left.
-	float ChildRounding;  // Radius of child window corners rounding. Set to
-						  // 0.0f to have rectangular windows.
+	float ChildRounding;	// Radius of child window corners rounding. Set to
+							// 0.0f to have rectangular windows.
 	float ChildBorderSize;	// Thickness of border around child windows.
 							// Generally set to 0.0f or 1.0f. (Other values are
 							// not well tested and more CPU/GPU costly).
@@ -4820,7 +4820,7 @@ struct ImGuiStyle {
 	ImVec2 FramePadding;	// Padding within a framed rectangle (used by most
 							// widgets).
 	float FrameRounding;	// Radius of frame corners rounding. Set to 0.0f to
-						  // have rectangular frame (used by most widgets).
+							// have rectangular frame (used by most widgets).
 	float FrameBorderSize;	// Thickness of border around frames. Generally set
 							// to 0.0f or 1.0f. (Other values are not well
 							// tested and more CPU/GPU costly).
@@ -4849,7 +4849,7 @@ struct ImGuiStyle {
 	float GrabMinSize;		 // Minimum width/height of a grab box for
 							 // slider/scrollbar.
 	float GrabRounding;		 // Radius of grabs corners rounding. Set to 0.0f to
-						 // have rectangular slider grabs.
+							 // have rectangular slider grabs.
 	float LogSliderDeadzone;  // The size in pixels of the dead-zone around zero
 							  // on logarithmic sliders that cross zero.
 	float ImageRounding;	  // Rounding of Image() calls.
@@ -4869,8 +4869,8 @@ struct ImGuiStyle {
 											 // visible when hovered if minimum
 											 // width. FLT_MAX: never show close
 											 // button when unselected.
-	float TabBarBorderSize;	 // Thickness of tab-bar separator, which takes on
-							 // the tab active color to denote focus.
+	float TabBarBorderSize;	   // Thickness of tab-bar separator, which takes on
+							   // the tab active color to denote focus.
 	float TabBarOverlineSize;  // Thickness of tab-bar overline, which
 							   // highlights the selected tab-bar.
 	float TableAngledHeadersAngle;	// Angle of angled headers (supported values
@@ -4891,7 +4891,7 @@ struct ImGuiStyle {
 	float DragDropTargetBorderSize;	 // Thickness of the drag and drop target
 									 // border.
 	float DragDropTargetPadding;	 // Size to expand the drag and drop target
-								  // from actual target item size.
+									 // from actual target item size.
 	float ColorMarkerSize;	// Size of R/G/B/A color markers for ColorEdit4()
 							// and for Drags/Sliders when using
 							// ImGuiSliderFlags_ColorMarkers.
@@ -4924,8 +4924,8 @@ struct ImGuiStyle {
 								 // scaling has not been configured).
 	float MouseCursorScale;		 // Scale software rendered mouse cursor (when
 								 // io.MouseDrawCursor is enabled). We apply
-							 // per-monitor DPI scaling over this scale. May be
-							 // removed later.
+	// per-monitor DPI scaling over this scale. May be
+	// removed later.
 	bool AntiAliasedLines;	// Enable anti-aliased lines/borders. Disable if you
 							// are really tight on CPU/GPU. Latched at the
 							// beginning of the frame (copied to ImDrawList).
@@ -4962,7 +4962,7 @@ struct ImGuiStyle {
 								 // Time required to consider mouse stationary.
 	float HoverDelayShort;		 // Delay for
 								 // IsItemHovered(ImGuiHoveredFlags_DelayShort).
-							// Usually used along with HoverStationaryDelay.
+	// Usually used along with HoverStationaryDelay.
 	float HoverDelayNormal;	 // Delay for
 							 // IsItemHovered(ImGuiHoveredFlags_DelayNormal). "
 	ImGuiHoveredFlags
@@ -5054,7 +5054,7 @@ struct ImGuiIO {
 	const char* LogFilename;  // = "imgui_log.txt"// Path to .log file (default
 							  // parameter to ImGui::LogToFile when no file is
 							  // specified).
-	void* UserData;	 // = NULL           // Store your own data.
+	void* UserData;			  // = NULL           // Store your own data.
 
 	// Font system
 	ImFontAtlas* Fonts;	  // <auto>           // Font atlas: load, rasterize and
@@ -5115,7 +5115,7 @@ struct ImGuiIO {
 										// button down + up) will be spread over
 										// multiple frames, improving
 										// interactions with low framerates.
-	bool ConfigInputTextCursorBlink;  // = true           // Enable blinking
+	bool ConfigInputTextCursorBlink;	// = true           // Enable blinking
 									  // cursor (optional as some users consider
 									  // it to be distracting).
 	bool ConfigInputTextEnterKeepActive;  // = false          // [BETA] Pressing
@@ -5155,7 +5155,7 @@ struct ImGuiIO {
 									   // scroll to clicked location. When
 									   // enabled, Shift+Click scrolls to
 									   // clicked location.
-	float ConfigMemoryCompactTimer;	 // = 60.0f          // Timer (in seconds)
+	float ConfigMemoryCompactTimer;	   // = 60.0f          // Timer (in seconds)
 									 // to free transient windows/tables memory
 									 // buffers when unused. Set to -1.0f to
 									 // disable.
@@ -5303,9 +5303,9 @@ struct ImGuiIO {
 	const char* BackendPlatformName;  // = NULL
 	const char* BackendRendererName;  // = NULL
 	void* BackendPlatformUserData;	  // = NULL           // User data for
-									// platform backend
-	void* BackendRendererUserData;	// = NULL           // User data for
-									// renderer backend
+									  // platform backend
+	void* BackendRendererUserData;	  // = NULL           // User data for
+									  // renderer backend
 	void* BackendLanguageUserData;	// = NULL           // User data for non C++
 									// programming language backend
 
@@ -5389,7 +5389,7 @@ struct ImGuiIO {
 							   // keyboard inputs to imgui). (e.g. InputText
 							   // active, or an imgui window is focused and
 							   // navigation is enabled, etc.).
-	bool WantTextInput;	 // Mobile/console: when set, you may display an
+	bool WantTextInput;		   // Mobile/console: when set, you may display an
 						 // on-screen keyboard. This is set by Dear ImGui when
 						 // it wants textual keyboard input to happen (e.g. when
 						 // a InputText widget is active).
@@ -5522,7 +5522,7 @@ struct ImGuiIO {
 	float PenPressure;	// Touch/Pen pressure (0.0f to 1.0f, should be >0.0f
 						// only when MouseDown[0] == true). Helper storage
 						// currently unused by Dear ImGui.
-	bool AppFocusLost;				// Only modify via AddFocusEvent()
+	bool AppFocusLost;	// Only modify via AddFocusEvent()
 	bool AppAcceptingEvents;		// Only modify via SetAppAcceptingEvents()
 	ImWchar16 InputQueueSurrogate;	// For AddInputCharacterUTF16()
 	ImVector<ImWchar>
@@ -5632,14 +5632,14 @@ struct ImGuiInputTextCallbackData {
 						  // // [Always]
 	bool BufDirty;	// Set if you modify Buf/BufTextLen!    // Write        //
 					// [Completion,History,Always]
-	char* Buf;		// Text buffer                          // Read-write   //
+	char* Buf;	// Text buffer                          // Read-write   //
 				// [Resize] Can replace pointer / [Completion,History,Always]
 				// Only write to pointed data, don't replace the actual pointer!
 	int BufTextLen;	 // Text length (in bytes)               // Read-write   //
 					 // [Resize,Completion,History,Always] Exclude
 					 // zero-terminator storage. In C land: ==
 					 // strlen(some_text), in C++ land: string.length()
-	int BufSize;  // Buffer size (in bytes) = capacity+1  // Read-only    //
+	int BufSize;	 // Buffer size (in bytes) = capacity+1  // Read-only    //
 				  // [Resize,Completion,History,Always] Include zero-terminator
 	// storage. In C land: == ARRAYSIZE(my_char_array), in C++ land:
 	// string.capacity()+1
@@ -5681,9 +5681,9 @@ struct ImGuiInputTextCallbackData {
 // NB: For basic min/max size constraint on each axis you don't need to use the
 // callback! The SetNextWindowSizeConstraints() parameters are enough.
 struct ImGuiSizeCallbackData {
-	void* UserData;	 // Read-only.   What user passed to
-					 // SetNextWindowSizeConstraints(). Generally store an
-					 // integer or float in here (need reinterpret_cast<>).
+	void* UserData;		 // Read-only.   What user passed to
+						 // SetNextWindowSizeConstraints(). Generally store an
+						 // integer or float in here (need reinterpret_cast<>).
 	ImVec2 Pos;			 // Read-only.   Window position, for reference.
 	ImVec2 CurrentSize;	 // Read-only.   Current window size.
 	ImVec2 DesiredSize;	 // Read-write.  Desired size, based on user's mouse
@@ -6353,12 +6353,12 @@ struct ImGuiMultiSelectIO {
 // Selection request type
 enum ImGuiSelectionRequestType {
 	ImGuiSelectionRequestType_None = 0,
-	ImGuiSelectionRequestType_SetAll,  // Request app to clear selection (if
-									   // Selected==false) or select all items
-									   // (if Selected==true). We cannot set
-									   // RangeFirstItem/RangeLastItem as its
-									   // contents is entirely up to user (not
-									   // necessarily an index)
+	ImGuiSelectionRequestType_SetAll,	 // Request app to clear selection (if
+										 // Selected==false) or select all items
+										 // (if Selected==true). We cannot set
+										 // RangeFirstItem/RangeLastItem as its
+										 // contents is entirely up to user (not
+										 // necessarily an index)
 	ImGuiSelectionRequestType_SetRange,	 // Request app to select/unselect
 										 // [RangeFirstItem..RangeLastItem]
 										 // items (inclusive) based on value of
@@ -6431,8 +6431,8 @@ struct ImGuiSelectionBasicStorage {
 	bool PreserveOrder;	 // = false  // GetNextSelectedItem() will return
 						 // ordered selection (currently implemented by two
 						 // additional sorts of selection. Could be improved)
-	void* UserData;	 // = NULL   // User data for use by adapter function //
-					 // e.g. selection.UserData = (void*)my_items;
+	void* UserData;		 // = NULL   // User data for use by adapter function //
+						 // e.g. selection.UserData = (void*)my_items;
 	ImGuiID (*AdapterIndexToStorageId)(
 		ImGuiSelectionBasicStorage* self,
 		int idx);  // e.g. selection.AdapterIndexToStorageId =
@@ -6752,7 +6752,7 @@ struct ImDrawList {
 	ImDrawVert* _VtxWritePtr;  // [Internal] point within VtxBuffer.Data after
 							   // each add command (to avoid using the
 							   // ImVector<> operators too much)
-	ImDrawIdx* _IdxWritePtr;  // [Internal] point within IdxBuffer.Data after
+	ImDrawIdx* _IdxWritePtr;   // [Internal] point within IdxBuffer.Data after
 							  // each add command (to avoid using the ImVector<>
 							  // operators too much)
 	ImVector<ImVec2> _Path;	 // [Internal] current path building
@@ -7162,9 +7162,9 @@ enum ImTextureFormat {
 // Status of a texture to communicate with Renderer Backend.
 enum ImTextureStatus {
 	ImTextureStatus_OK,
-	ImTextureStatus_Destroyed,	 // Backend destroyed the texture.
-	ImTextureStatus_WantCreate,	 // Requesting backend to create the texture.
-								 // Set status OK when done.
+	ImTextureStatus_Destroyed,	  // Backend destroyed the texture.
+	ImTextureStatus_WantCreate,	  // Requesting backend to create the texture.
+								  // Set status OK when done.
 	ImTextureStatus_WantUpdates,  // Requesting backend to update specific
 								  // blocks of pixels (write to texture portions
 								  // which have never been used before). Set
@@ -7219,8 +7219,8 @@ struct ImTextureData {
 	unsigned char*
 		Pixels;	 // w    r   // Pointer to buffer holding 'Width*Height' pixels
 				 // and 'Width*Height*BytesPerPixels' bytes.
-	ImTextureRect UsedRect;	 // w    r   // Bounding box encompassing all past
-							 // and queued Updates[].
+	ImTextureRect UsedRect;	   // w    r   // Bounding box encompassing all past
+							   // and queued Updates[].
 	ImTextureRect UpdateRect;  // w    r   // Bounding box encompassing all
 							   // queued Updates[].
 	ImVector<ImTextureRect>
@@ -7409,9 +7409,9 @@ struct ImFontGlyph {
 	float X0, Y0, X1,
 		Y1;	 // Glyph corners. Offsets from current cursor/layout position.
 	float U0, V0, U1,
-		V1;	 // Texture coordinates for the current value of
-			 // ImFontAtlas->TexRef. Cached equivalent of calling
-			 // GetCustomRect() with PackId.
+		V1;		 // Texture coordinates for the current value of
+				 // ImFontAtlas->TexRef. Cached equivalent of calling
+				 // GetCustomRect() with PackId.
 	int PackId;	 // [Internal] ImFontAtlasRectId value (FIXME: Cold data, could
 				 // be moved elsewhere?)
 
@@ -7804,7 +7804,7 @@ struct ImFontAtlas {
 		FontLoaderFlags;  // Shared flags (for all fonts) for font loader. THIS
 						  // IS BUILD IMPLEMENTATION DEPENDENT (e.g. Per-font
 						  // override is also available in ImFontConfig).
-	int RefCount;				 // Number of contexts using this atlas
+	int RefCount;		  // Number of contexts using this atlas
 	ImGuiContext* OwnerContext;	 // Context which own the atlas will be in
 								 // charge of updating and destroying it.
 
@@ -7875,7 +7875,7 @@ struct ImFontBaked {
 											// rasterization/texture cost (not
 											// exact, we approximate the cost of
 											// padding between glyphs)
-	unsigned int WantDestroy : 1;	  // 0  //     // Queued for destroy
+	unsigned int WantDestroy : 1;			// 0  //     // Queued for destroy
 	unsigned int LoadNoFallback : 1;  // 0  //     // Disable loading fallback
 									  // in lower-level calls.
 	unsigned int
@@ -7964,8 +7964,8 @@ struct ImFont {
 							 // of 4K codepoints that has one active glyph. This
 							 // is mainly used to facilitate iterations across
 							 // all used codepoints.
-	bool EllipsisAutoBake;	// 1     //     // Mark when the "..." glyph needs
-							// to be generated.
+	bool EllipsisAutoBake;	 // 1     //     // Mark when the "..." glyph needs
+							 // to be generated.
 	ImGuiStorage RemapPairs;  // 16    //     // Remapping pairs when using
 							  // AddRemapChar(), otherwise empty.
 #ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
@@ -8087,8 +8087,8 @@ struct ImGuiViewport {
 		FramebufferScale;  // Density of the viewport for Retina display (always
 						   // 1,1 on Windows, may be 2,2 etc on macOS/iOS). This
 						   // will affect font rasterizer density.
-	ImVec2 WorkPos;	 // Work Area: Position of the viewport minus task bars,
-					 // menus bars, status bars (>= Pos)
+	ImVec2 WorkPos;	  // Work Area: Position of the viewport minus task bars,
+					  // menus bars, status bars (>= Pos)
 	ImVec2 WorkSize;  // Work Area: Size of the viewport minus task bars, menu
 					  // bars, status bars (<= Size)
 

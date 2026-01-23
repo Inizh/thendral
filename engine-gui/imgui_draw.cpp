@@ -6417,16 +6417,17 @@ ImFontBaked* ImFontAtlasBakedGetOrAdd(ImFontAtlas* atlas, ImFont* font,
 												font_rasterizer_density);
 		if (baked != NULL) return baked;
 		if (atlas->Locked) {
-			IM_ASSERT(!atlas->Locked &&
-					  "Cannot use dynamic font size with a locked "
-					  "ImFontAtlas!");	// Locked
-										// because
-										// rendering
-										// backend
-										// does
-										// not
-										// support
-										// ImGuiBackendFlags_RendererHasTextures!
+			IM_ASSERT(
+				!atlas->Locked &&
+				"Cannot use dynamic font size with a locked "
+				"ImFontAtlas!");  // Locked
+								  // because
+								  // rendering
+								  // backend
+								  // does
+								  // not
+								  // support
+								  // ImGuiBackendFlags_RendererHasTextures!
 			return NULL;
 		}
 	}
