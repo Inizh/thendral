@@ -111,11 +111,12 @@ Index of this file:
 					 // ok, for ImFloor()
 #pragma clang diagnostic ignored \
 	"-Wold-style-cast"	// warning: use of old-style cast
-#pragma clang diagnostic ignored "-Wzero-as-null-pointer-constant"	// warning:
-																	// zero as
-																	// null
-																	// pointer
-																	// constant
+#pragma clang diagnostic ignored \
+	"-Wzero-as-null-pointer-constant"  // warning:
+									   // zero as
+									   // null
+									   // pointer
+									   // constant
 #pragma clang diagnostic ignored \
 	"-Wdouble-promotion"  // warning: implicit conversion from 'float' to
 						  // 'double' when passing argument to function
@@ -208,9 +209,10 @@ struct ImGuiContext;   // Main Dear ImGui context
 struct ImGuiContextHook;   // Hook for extensions like ImGuiTestEngine
 struct ImGuiDataTypeInfo;  // Type information associated to a ImGuiDataType
 						   // enum
-struct ImGuiDeactivatedItemData;  // Data for
-								  // IsItemDeactivated()/IsItemDeactivatedAfterEdit()
-								  // function.
+struct
+	ImGuiDeactivatedItemData;  // Data for
+							   // IsItemDeactivated()/IsItemDeactivatedAfterEdit()
+							   // function.
 struct ImGuiErrorRecoveryState;	 // Storage of stack sizes for error handling
 								 // and recovery
 struct ImGuiGroupData;		 // Stacked storage data for BeginGroup()/EndGroup()
@@ -2075,7 +2077,7 @@ struct IMGUI_API ImGuiInputTextState {
 	int BufCapacity;  // end-user buffer capacity (include zero terminator)
 	ImVec2 Scroll;	// horizontal offset (managed manually) + vertical scrolling
 					// (pulled from child window's own Scroll.y)
-	int LineCount;	// last line count (solely for debugging)
+	int LineCount;		// last line count (solely for debugging)
 	float WrapWidth;	// word-wrapping width
 	float CursorAnim;	// timer for cursor blink, reset on every user action so
 						// the cursor reappears immediately
@@ -2144,7 +2146,7 @@ enum ImGuiWindowRefreshFlags_ {
 		1 << 1,	 // [EXPERIMENTAL] Always refresh on hover
 	ImGuiWindowRefreshFlags_RefreshOnFocus =
 		1 << 2,	 // [EXPERIMENTAL] Always refresh on focus
-	// Refresh policy/frequency, Load Balancing etc.
+				 // Refresh policy/frequency, Load Balancing etc.
 };
 
 enum ImGuiWindowBgClickFlags_ {
@@ -2561,28 +2563,27 @@ enum ImGuiInputFlagsPrivate_ {
 	// - Repeat mode: Repeat rate selection
 	ImGuiInputFlags_RepeatRateDefault = 1
 										<< 1,  // Repeat rate: Regular (default)
-	ImGuiInputFlags_RepeatRateNavMove = 1 << 2,	 // Repeat rate: Fast
-	ImGuiInputFlags_RepeatRateNavTweak =
-		1 << 3,	 // Repeat rate: Faster
-				 // - Repeat mode: Specify when repeating key pressed can be
-				 // interrupted.
-				 // - In theory ImGuiInputFlags_RepeatUntilOtherKeyPress may be
-				 // a desirable default, but it would break too many behavior so
-				 // everything is opt-in.
+	ImGuiInputFlags_RepeatRateNavMove = 1 << 2,	  // Repeat rate: Fast
+	ImGuiInputFlags_RepeatRateNavTweak = 1 << 3,  // Repeat rate: Faster
+	// - Repeat mode: Specify when repeating key pressed can be
+	// interrupted.
+	// - In theory ImGuiInputFlags_RepeatUntilOtherKeyPress may be
+	// a desirable default, but it would break too many behavior so
+	// everything is opt-in.
 	ImGuiInputFlags_RepeatUntilRelease =
 		1 << 4,	 // Stop repeating when released (default for all functions
-				 // except Shortcut). This only exists to allow overriding
-				 // Shortcut() default behavior.
+	// except Shortcut). This only exists to allow overriding
+	// Shortcut() default behavior.
 	ImGuiInputFlags_RepeatUntilKeyModsChange =
 		1 << 5,	 // Stop repeating when released OR if keyboard mods are changed
-				 // (default for Shortcut)
+	// (default for Shortcut)
 	ImGuiInputFlags_RepeatUntilKeyModsChangeFromNone =
 		1 << 6,	 // Stop repeating when released OR if keyboard mods are leaving
-				 // the None state. Allows going from Mod+Key to Key by
-				 // releasing Mod.
+	// the None state. Allows going from Mod+Key to Key by
+	// releasing Mod.
 	ImGuiInputFlags_RepeatUntilOtherKeyPress =
 		1 << 7,	 // Stop repeating when released OR if any other keyboard key is
-				 // pressed during the repeat
+	// pressed during the repeat
 
 	// Flags for SetKeyOwner(), SetItemKeyOwner()
 	// - Locking key away from non-input aware code. Locking is useful to make
@@ -2824,7 +2825,7 @@ struct ImGuiNavItemData {
 	ImGuiWindow*
 		Window;	 // Init,Move    // Best candidate window
 				 // (result->ItemWindow->RootWindowForNav == request->Window)
-	ImGuiID ID;	 // Init,Move    // Best candidate item ID
+	ImGuiID ID;			   // Init,Move    // Best candidate item ID
 	ImGuiID FocusScopeId;  // Init,Move    // Best candidate focus scope ID
 	ImRect RectRel;	 // Init,Move    // Best candidate bounding box in window
 					 // relative space
@@ -3785,11 +3786,12 @@ struct ImGuiContext {
 	int NavTabbingCounter;	// >0 when counting items for tabbing
 	ImGuiNavItemData
 		NavMoveResultLocal;	 // Best move request candidate within NavWindow
-	ImGuiNavItemData NavMoveResultLocalVisible;	 // Best move request candidate
-												 // within NavWindow that are
-												 // mostly visible (when using
-												 // ImGuiNavMoveFlags_AlsoScoreVisibleSet
-												 // flag)
+	ImGuiNavItemData
+		NavMoveResultLocalVisible;	// Best move request candidate
+									// within NavWindow that are
+									// mostly visible (when using
+									// ImGuiNavMoveFlags_AlsoScoreVisibleSet
+									// flag)
 	ImGuiNavItemData
 		NavMoveResultOther;	 // Best move request candidate within NavWindow's
 							 // flattened hierarchy (when using
@@ -3810,10 +3812,11 @@ struct ImGuiContext {
 	ImGuiKeyChord NavJustMovedToKeyMods;
 	bool NavJustMovedToIsTabbing;  // Copy of ImGuiNavMoveFlags_IsTabbing. Maybe
 								   // we should store whole flags.
-	bool NavJustMovedToHasSelectionData;  // Copy of move result's ItemFlags &
-										  // ImGuiItemFlags_HasSelectionUserData).
-										  // Maybe we should just store
-										  // ImGuiNavItemData.
+	bool
+		NavJustMovedToHasSelectionData;	 // Copy of move result's ItemFlags &
+										 // ImGuiItemFlags_HasSelectionUserData).
+										 // Maybe we should just store
+										 // ImGuiNavItemData.
 
 	// Navigation: Windowing (Ctrl+Tab for list, or Menu button + keys or
 	// directional pads to move/resize)

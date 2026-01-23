@@ -12643,12 +12643,13 @@ bool ImGui::IsMouseDown(ImGuiMouseButton button) {
 	ImGuiContext& g = *GImGui;
 	IM_ASSERT(button >= 0 && button < IM_COUNTOF(g.IO.MouseDown));
 	return g.IO.MouseDown[button] &&
-		   TestKeyOwner(MouseButtonToKey(button),
-						ImGuiKeyOwner_Any);	 // should be same as
-											 // IsKeyDown(MouseButtonToKey(button),
-											 // ImGuiKeyOwner_Any), but this
-											 // allows legacy code hijacking the
-											 // io.Mousedown[] array.
+		   TestKeyOwner(
+			   MouseButtonToKey(button),
+			   ImGuiKeyOwner_Any);	// should be same as
+									// IsKeyDown(MouseButtonToKey(button),
+									// ImGuiKeyOwner_Any), but this
+									// allows legacy code hijacking the
+									// io.Mousedown[] array.
 }
 
 bool ImGui::IsMouseDown(ImGuiMouseButton button, ImGuiID owner_id) {
@@ -12700,10 +12701,11 @@ bool ImGui::IsMouseReleased(ImGuiMouseButton button) {
 	ImGuiContext& g = *GImGui;
 	IM_ASSERT(button >= 0 && button < IM_COUNTOF(g.IO.MouseDown));
 	return g.IO.MouseReleased[button] &&
-		   TestKeyOwner(MouseButtonToKey(button),
-						ImGuiKeyOwner_Any);	 // Should be same as
-											 // IsKeyReleased(MouseButtonToKey(button),
-											 // ImGuiKeyOwner_Any)
+		   TestKeyOwner(
+			   MouseButtonToKey(button),
+			   ImGuiKeyOwner_Any);	// Should be same as
+									// IsKeyReleased(MouseButtonToKey(button),
+									// ImGuiKeyOwner_Any)
 }
 
 bool ImGui::IsMouseReleased(ImGuiMouseButton button, ImGuiID owner_id) {
@@ -13127,7 +13129,7 @@ static ImGuiWindow* FindBestWheelingWindow(const ImVec2& wheel) {
 				// - a child window has the ImGuiWindowFlags_NoScrollWithMouse
 				// flag.
 				//// - a child window doesn't need scrolling because it is
-				///already at the edge for the direction we are going in
+				/// already at the edge for the direction we are going in
 				///(FIXME-WIP)
 				const bool has_scrolling = (window->ScrollMax[axis] != 0.0f);
 				const bool inputs_disabled =
