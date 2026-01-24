@@ -44,3 +44,8 @@
 
 [Bb]uild/
 [Bb]in/
+
+
+#editors 
+
+.vscode/
