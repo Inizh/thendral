@@ -255,10 +255,11 @@ struct ImGui_ImplSDL2_Data {
 	int MouseLastLeaveFrame;
 	bool MouseCanUseGlobalState;
 	bool MouseCanUseCapture;
-	bool MouseCanReportHoveredViewport;	 // This is hard to use/unreliable on
-										 // SDL so we'll set
-										 // ImGuiBackendFlags_HasMouseHoveredViewport
-										 // dynamically based on state.
+	bool
+		MouseCanReportHoveredViewport;	// This is hard to use/unreliable on
+										// SDL so we'll set
+										// ImGuiBackendFlags_HasMouseHoveredViewport
+										// dynamically based on state.
 
 	// Gamepad handling
 	ImVector<SDL_GameController*> Gamepads;

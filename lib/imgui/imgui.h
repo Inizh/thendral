@@ -209,11 +209,12 @@ ImFontAtlasFlags, ImFontAtlas, ImFontBaked, ImFont)
 #pragma clang diagnostic ignored \
 	"-Wfloat-equal"	 // warning: comparing floating point with == or != is
 					 // unsafe
-#pragma clang diagnostic ignored "-Wzero-as-null-pointer-constant"	// warning:
-																	// zero as
-																	// null
-																	// pointer
-																	// constant
+#pragma clang diagnostic ignored \
+	"-Wzero-as-null-pointer-constant"  // warning:
+									   // zero as
+									   // null
+									   // pointer
+									   // constant
 #pragma clang diagnostic ignored \
 	"-Wreserved-identifier"	 // warning: identifier '_Xxx' is reserved because
 							 // it starts with '_' followed by a capital letter
@@ -325,9 +326,9 @@ struct ImGuiSelectionBasicStorage;	// Optional helper to store multi-selection
 struct ImGuiSelectionExternalStorage;  // Optional helper to apply
 									   // multi-selection requests to existing
 									   // randomly accessible storage.
-struct ImGuiSelectionRequest;  // A selection request (stored in
-							   // ImGuiMultiSelectIO)
-struct ImGuiSizeCallbackData;  // Callback data when using
+struct ImGuiSelectionRequest;		   // A selection request (stored in
+									   // ImGuiMultiSelectIO)
+struct ImGuiSizeCallbackData;		   // Callback data when using
 							   // SetNextWindowSizeConstraints() (rare/advanced
 							   // use)
 struct ImGuiStorage;  // Helper for key->value storage (container sorted by key)
@@ -2852,15 +2853,15 @@ enum ImGuiInputTextFlags_ {
 		1 << 5,	 // Pressing TAB input a '\t' character into the text field
 	ImGuiInputTextFlags_EnterReturnsTrue =
 		1 << 6,	 // Return 'true' when Enter is pressed (as opposed to every
-				 // time the value was modified). Consider using
-				 // IsItemDeactivatedAfterEdit() instead!
+	// time the value was modified). Consider using
+	// IsItemDeactivatedAfterEdit() instead!
 	ImGuiInputTextFlags_EscapeClearsAll =
 		1 << 7,	 // Escape key clears content if not empty, and deactivate
-				 // otherwise (contrast to default behavior of Escape to revert)
+	// otherwise (contrast to default behavior of Escape to revert)
 	ImGuiInputTextFlags_CtrlEnterForNewLine =
 		1 << 8,	 // In multi-line mode, validate with Enter, add new line with
-				 // Ctrl+Enter (default is opposite: validate with Ctrl+Enter,
-				 // add line with Enter).
+	// Ctrl+Enter (default is opposite: validate with Ctrl+Enter,
+	// add line with Enter).
 
 	// Other options
 	ImGuiInputTextFlags_ReadOnly = 1 << 9,	// Read-only mode
@@ -2901,13 +2902,12 @@ enum ImGuiInputTextFlags_ {
 				  // Modify 'EventChar' to replace or discard, or return 1 in
 				  // callback to discard.
 	ImGuiInputTextFlags_CallbackResize =
-		1
-		<< 22,	// Callback on buffer capacity changes request (beyond
-				// 'buf_size' parameter value), allowing the string to grow.
-				// Notify when the string wants to be resized (for string types
-				// which hold a cache of their Size). You will be provided a new
-				// BufSize in the callback and NEED to honor it. (see
-				// misc/cpp/imgui_stdlib.h for an example of using this)
+		1 << 22,  // Callback on buffer capacity changes request (beyond
+				  // 'buf_size' parameter value), allowing the string to grow.
+	// Notify when the string wants to be resized (for string types
+	// which hold a cache of their Size). You will be provided a new
+	// BufSize in the callback and NEED to honor it. (see
+	// misc/cpp/imgui_stdlib.h for an example of using this)
 	ImGuiInputTextFlags_CallbackEdit =
 		1 << 23,  // Callback on any edit. Note that InputText() already returns
 				  // true on edit + you can always use IsItemEdited(). The
@@ -3856,11 +3856,12 @@ enum ImGuiBackendFlags_ {
 				 // output of large meshes (64K+ vertices) while still using
 				 // 16-bit indices.
 	ImGuiBackendFlags_RendererHasTextures =
-		1 << 4,	 // Backend Renderer supports ImTextureData requests to
-				 // create/update/destroy textures. This enables incremental
-				 // texture updates and texture reloads. See
-				 // https://github.com/ocornut/imgui/blob/master/docs/BACKENDS.md
-				 // for instructions on how to upgrade your custom backend.
+		1
+		<< 4,  // Backend Renderer supports ImTextureData requests to
+			   // create/update/destroy textures. This enables incremental
+			   // texture updates and texture reloads. See
+			   // https://github.com/ocornut/imgui/blob/master/docs/BACKENDS.md
+			   // for instructions on how to upgrade your custom backend.
 
 	// [BETA] Multi-Viewports
 	ImGuiBackendFlags_RendererHasViewports =
@@ -3933,7 +3934,7 @@ enum ImGuiCol_ {
 	ImGuiCol_TabDimmedSelected,	 // Tab background, when tab-bar is unfocused &
 								 // tab is selected
 	ImGuiCol_TabDimmedSelectedOverline,	 //..horizontal overline, when tab-bar
-										 //is unfocused & tab is selected
+										 // is unfocused & tab is selected
 	ImGuiCol_DockingPreview,  // Preview overlay color when about to docking
 							  // something
 	ImGuiCol_DockingEmptyBg,  // Background color for empty node (e.g.
@@ -4359,25 +4360,24 @@ enum ImGuiTableFlags_ {
 	ImGuiTableFlags_Resizable = 1 << 0,	 // Enable resizing columns.
 	ImGuiTableFlags_Reorderable =
 		1 << 1,	 // Enable reordering columns in header row (need calling
-				 // TableSetupColumn() + TableHeadersRow() to display headers)
+	// TableSetupColumn() + TableHeadersRow() to display headers)
 	ImGuiTableFlags_Hideable =
 		1 << 2,	 // Enable hiding/disabling columns in context menu.
 	ImGuiTableFlags_Sortable =
 		1 << 3,	 // Enable sorting. Call TableGetSortSpecs() to obtain sort
-				 // specs. Also see ImGuiTableFlags_SortMulti and
-				 // ImGuiTableFlags_SortTristate.
+	// specs. Also see ImGuiTableFlags_SortMulti and
+	// ImGuiTableFlags_SortTristate.
 	ImGuiTableFlags_NoSavedSettings =
 		1 << 4,	 // Disable persisting columns order, width, visibility and sort
-				 // settings in the .ini file.
+	// settings in the .ini file.
 	ImGuiTableFlags_ContextMenuInBody =
 		1 << 5,	 // Right-click on columns body/contents will display table
-				 // context menu. By default it is available in
-				 // TableHeadersRow(). Decorations
+	// context menu. By default it is available in
+	// TableHeadersRow(). Decorations
 	ImGuiTableFlags_RowBg =
-		1
-		<< 6,  // Set each RowBg color with ImGuiCol_TableRowBg or
-			   // ImGuiCol_TableRowBgAlt (equivalent of calling TableSetBgColor
-			   // with ImGuiTableBgFlags_RowBg0 on each row manually)
+		1 << 6,	 // Set each RowBg color with ImGuiCol_TableRowBg or
+	// ImGuiCol_TableRowBgAlt (equivalent of calling TableSetBgColor
+	// with ImGuiTableBgFlags_RowBg0 on each row manually)
 	ImGuiTableFlags_BordersInnerH =
 		1 << 7,	 // Draw horizontal borders between rows.
 	ImGuiTableFlags_BordersOuterH =
@@ -4405,10 +4405,9 @@ enum ImGuiTableFlags_ {
 		1 << 11,  // [ALPHA] Disable vertical borders in columns Body (borders
 				  // will always appear in Headers). -> May move to style
 	ImGuiTableFlags_NoBordersInBodyUntilResize =
-		1
-		<< 12,	// [ALPHA] Disable vertical borders in columns Body until
-				// hovered for resize (borders will always appear in Headers).
-				// -> May move to style Sizing Policy (read above for defaults)
+		1 << 12,  // [ALPHA] Disable vertical borders in columns Body until
+				  // hovered for resize (borders will always appear in Headers).
+	// -> May move to style Sizing Policy (read above for defaults)
 	ImGuiTableFlags_SizingFixedFit =
 		1 << 13,  // Columns default to _WidthFixed or _WidthAuto (if resizable
 				  // or not resizable), matching contents width.
@@ -4490,31 +4489,31 @@ enum ImGuiTableColumnFlags_ {
 	ImGuiTableColumnFlags_None = 0,
 	ImGuiTableColumnFlags_Disabled =
 		1 << 0,	 // Overriding/master disable flag: hide column, won't show in
-				 // context menu (unlike calling TableSetColumnEnabled() which
-				 // manipulates the user accessible state)
+	// context menu (unlike calling TableSetColumnEnabled() which
+	// manipulates the user accessible state)
 	ImGuiTableColumnFlags_DefaultHide =
 		1 << 1,	 // Default as a hidden/disabled column.
 	ImGuiTableColumnFlags_DefaultSort = 1 << 2,	 // Default as a sorting column.
 	ImGuiTableColumnFlags_WidthStretch =
 		1 << 3,	 // Column will stretch. Preferable with horizontal scrolling
-				 // disabled (default if table sizing policy is
-				 // _SizingStretchSame or _SizingStretchProp).
+	// disabled (default if table sizing policy is
+	// _SizingStretchSame or _SizingStretchProp).
 	ImGuiTableColumnFlags_WidthFixed =
 		1 << 4,	 // Column will not stretch. Preferable with horizontal
-				 // scrolling enabled (default if table sizing policy is
-				 // _SizingFixedFit and table is resizable).
+	// scrolling enabled (default if table sizing policy is
+	// _SizingFixedFit and table is resizable).
 	ImGuiTableColumnFlags_NoResize = 1 << 5,  // Disable manual resizing.
 	ImGuiTableColumnFlags_NoReorder =
 		1 << 6,	 // Disable manual reordering this column, this will also
-				 // prevent other columns from crossing over this column.
+	// prevent other columns from crossing over this column.
 	ImGuiTableColumnFlags_NoHide =
 		1 << 7,	 // Disable ability to hide/disable this column.
 	ImGuiTableColumnFlags_NoClip =
 		1 << 8,	 // Disable clipping for this column (all NoClip columns will
-				 // render in a same draw command).
+	// render in a same draw command).
 	ImGuiTableColumnFlags_NoSort =
 		1 << 9,	 // Disable ability to sort on this field (even if
-				 // ImGuiTableFlags_Sortable is set on the table).
+	// ImGuiTableFlags_Sortable is set on the table).
 	ImGuiTableColumnFlags_NoSortAscending =
 		1 << 10,  // Disable ability to sort in the ascending direction.
 	ImGuiTableColumnFlags_NoSortDescending =
@@ -5107,8 +5106,8 @@ struct ImGuiStyle {
 								 // windows
 	float MouseCursorScale;		 // Scale software rendered mouse cursor (when
 								 // io.MouseDrawCursor is enabled). We apply
-							 // per-monitor DPI scaling over this scale. May be
-							 // removed later.
+	// per-monitor DPI scaling over this scale. May be
+	// removed later.
 	bool AntiAliasedLines;	// Enable anti-aliased lines/borders. Disable if you
 							// are really tight on CPU/GPU. Latched at the
 							// beginning of the frame (copied to ImDrawList).
@@ -5145,7 +5144,7 @@ struct ImGuiStyle {
 								 // Time required to consider mouse stationary.
 	float HoverDelayShort;		 // Delay for
 								 // IsItemHovered(ImGuiHoveredFlags_DelayShort).
-							// Usually used along with HoverStationaryDelay.
+	// Usually used along with HoverStationaryDelay.
 	float HoverDelayNormal;	 // Delay for
 							 // IsItemHovered(ImGuiHoveredFlags_DelayNormal). "
 	ImGuiHoveredFlags
@@ -5337,23 +5336,23 @@ struct ImGuiIO {
 										  // windows.
 	bool
 		ConfigViewportsPlatformFocusSetsImGuiFocus;	 //= true // When a platform
-													 //window is focused (e.g.
-													 //using Alt+Tab, clicking
-													 //Platform Title Bar),
-													 //apply corresponding focus
-													 //on imgui windows (may
-													 //clear focus/active id
-													 //from imgui windows
-													 //location in other
-													 //platform windows). In
-													 //principle this is better
-													 //enabled but we provide an
-													 //opt-out, because some
-													 //Linux window managers
-													 //tend to eagerly focus
-													 //windows (e.g. on mouse
-													 //hover, or even a simple
-													 //window pos/size change).
+													 // window is focused (e.g.
+													 // using Alt+Tab, clicking
+													 // Platform Title Bar),
+													 // apply corresponding
+													 // focus on imgui windows
+													 // (may clear focus/active
+													 // id from imgui windows
+													 // location in other
+													 // platform windows). In
+													 // principle this is better
+													 // enabled but we provide
+													 // an opt-out, because some
+													 // Linux window managers
+													 // tend to eagerly focus
+													 // windows (e.g. on mouse
+													 // hover, or even a simple
+													 // window pos/size change).
 
 	// DPI/Scaling options
 	// This may keep evolving during 1.92.x releases. Expect some turbulence.
@@ -5519,9 +5518,10 @@ struct ImGuiIO {
 										   // show an error message popup when
 										   // multiple items have conflicting
 										   // identifiers.
-	bool ConfigDebugHighlightIdConflictsShowItemPicker;	 //=true // Show "Item
-														 //Picker" button in
-														 //aforementioned popup.
+	bool
+		ConfigDebugHighlightIdConflictsShowItemPicker;	//=true // Show "Item
+														// Picker" button in
+														// aforementioned popup.
 
 	// Tools to test correct Begin/End and BeginChild/EndChild behaviors.
 	// - Presently Begin()/End() and BeginChild()/EndChild() needs to ALWAYS be
@@ -5551,11 +5551,12 @@ struct ImGuiIO {
 	// clearing inputs data.
 	// - Backends may have other side-effects on focus loss, so this will reduce
 	// side-effects but not necessary remove all of them.
-	bool ConfigDebugIgnoreFocusLoss;  // = false          // Ignore
-									  // io.AddFocusEvent(false), consequently
-									  // not calling
-									  // io.ClearInputKeys()/io.ClearInputMouse()
-									  // in input processing.
+	bool
+		ConfigDebugIgnoreFocusLoss;	 // = false          // Ignore
+									 // io.AddFocusEvent(false), consequently
+									 // not calling
+									 // io.ClearInputKeys()/io.ClearInputMouse()
+									 // in input processing.
 
 	// Option to audit .ini data
 	bool ConfigDebugIniSettings;  // = false          // Save .ini data with
@@ -5920,7 +5921,7 @@ struct ImGuiInputTextCallbackData {
 						  // // [Always]
 	bool BufDirty;	// Set if you modify Buf/BufTextLen!    // Write        //
 					// [Completion,History,Always]
-	char* Buf;		// Text buffer                          // Read-write   //
+	char* Buf;	// Text buffer                          // Read-write   //
 				// [Resize] Can replace pointer / [Completion,History,Always]
 				// Only write to pointed data, don't replace the actual pointer!
 	int BufTextLen;	 // Text length (in bytes)               // Read-write   //
@@ -6672,7 +6673,7 @@ enum ImGuiMultiSelectFlags_ {
 // code, 'app'=application/user code.
 struct ImGuiMultiSelectIO {
 	//------------------------------------------// BeginMultiSelect /
-	//EndMultiSelect
+	// EndMultiSelect
 	ImVector<ImGuiSelectionRequest>
 		Requests;  //  ms:w, app:r     /  ms:w  app:r   // Requests to apply to
 				   //  your selection data.
@@ -6720,7 +6721,7 @@ enum ImGuiSelectionRequestType {
 // Selection request item
 struct ImGuiSelectionRequest {
 	//------------------------------------------// BeginMultiSelect /
-	//EndMultiSelect
+	// EndMultiSelect
 	ImGuiSelectionRequestType
 		Type;  //  ms:w, app:r     /  ms:w, app:r   // Request type. You'll most
 			   //  often receive 1 Clear + 1 SetRange with a single-item range.
@@ -6781,7 +6782,7 @@ struct ImGuiSelectionBasicStorage {
 						 // ordered selection (currently implemented by two
 						 // additional sorts of selection. Could be improved)
 	void* UserData;		 // = NULL   // User data for use by adapter function //
-					 // e.g. selection.UserData = (void*)my_items;
+						 // e.g. selection.UserData = (void*)my_items;
 	ImGuiID (*AdapterIndexToStorageId)(
 		ImGuiSelectionBasicStorage* self,
 		int idx);  // e.g. selection.AdapterIndexToStorageId =
@@ -7385,7 +7386,7 @@ struct ImDrawList {
 #ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
 	inline void PushTextureID(ImTextureRef tex_ref) {
 		PushTexture(tex_ref);
-	}											  // RENAMED in 1.92.0
+	}  // RENAMED in 1.92.0
 	inline void PopTextureID() { PopTexture(); }  // RENAMED in 1.92.0
 #endif
 	// inline  void  AddEllipse(const ImVec2& center, float radius_x, float
@@ -7550,9 +7551,10 @@ struct ImTextureData {
 	int UniqueID;  // w    -   // [DEBUG] Sequential index to facilitate
 				   // identifying a texture when debugging/printing. Unique per
 				   // atlas.
-	ImTextureStatus Status;	 // rw   rw  //
-							 // ImTextureStatus_OK/_WantCreate/_WantUpdates/_WantDestroy.
-							 // Always use SetStatus() to modify!
+	ImTextureStatus
+		Status;	 // rw   rw  //
+				 // ImTextureStatus_OK/_WantCreate/_WantUpdates/_WantDestroy.
+				 // Always use SetStatus() to modify!
 	void* BackendUserData;	// -    rw  // Convenience storage for backend. Some
 							// backends may have enough with TexID.
 	ImTextureID TexID;		// r    w   // Backend-specific texture identifier.
@@ -7789,16 +7791,17 @@ struct ImFontGlyphRangesBuilder {
 		int off = (int)(n >> 5);
 		ImU32 mask = 1u << (n & 31);
 		UsedChars[off] |= mask;
-	}											   // Set bit n in the array
+	}  // Set bit n in the array
 	inline void AddChar(ImWchar c) { SetBit(c); }  // Add character
 	IMGUI_API void AddText(
 		const char* text,
 		const char* text_end =
 			NULL);	// Add string (each character of the UTF-8 string are added)
 	IMGUI_API void AddRanges(
-		const ImWchar* ranges);	 // Add ranges, e.g.
-								 // builder.AddRanges(ImFontAtlas::GetGlyphRangesDefault())
-								 // to force add all of ASCII/Latin+Ext
+		const ImWchar*
+			ranges);  // Add ranges, e.g.
+					  // builder.AddRanges(ImFontAtlas::GetGlyphRangesDefault())
+					  // to force add all of ASCII/Latin+Ext
 	IMGUI_API void BuildRanges(
 		ImVector<ImWchar>* out_ranges);	 // Output new ranges
 };
@@ -8482,9 +8485,10 @@ struct ImGuiViewport {
 	ImGuiID ParentViewportId;  // (Advanced) 0: no parent. Instruct the platform
 							   // backend to setup a parent/child relationship
 							   // between platform windows.
-	ImGuiViewport* ParentViewport;	// (Advanced) Direct shortcut to
-									// ImGui::FindViewportByID(ParentViewportId).
-									// NULL: no parent.
+	ImGuiViewport*
+		ParentViewport;	 // (Advanced) Direct shortcut to
+						 // ImGui::FindViewportByID(ParentViewportId).
+						 // NULL: no parent.
 	ImDrawData*
 		DrawData;  // The ImDrawData corresponding to this viewport. Valid after
 				   // Render() and until the next call to NewFrame().
@@ -9019,7 +9023,7 @@ IMGUI_API bool ListBox(const char* label, int* current_item,
 // Renamed in 1.77, renamed back in 1.79. Sorry!
 //-- OBSOLETED in 1.78 (from June 2020): Old drag/sliders functions that took a
 //'float power > 1.0f' argument instead of ImGuiSliderFlags_Logarithmic. See
-//github.com/ocornut/imgui/issues/3361 for details. IMGUI_API bool
+// github.com/ocornut/imgui/issues/3361 for details. IMGUI_API bool
 // DragScalar(const char* label, ImGuiDataType data_type, void* p_data, float
 // v_speed, const void* p_min, const void* p_max, const char* format, float
 // power = 1.0f)                                                            //
@@ -9163,7 +9167,7 @@ const           { return X != 0xFFFF; }
 };*/
 
 //-- OBSOLETED in 1.82 (from Mars 2021): flags for AddRect(), AddRectFilled(),
-//AddImageRounded(), PathRect() typedef ImDrawFlags ImDrawCornerFlags; enum
+// AddImageRounded(), PathRect() typedef ImDrawFlags ImDrawCornerFlags; enum
 // ImDrawCornerFlags_
 //{
 //    ImDrawCornerFlags_None      = ImDrawFlags_RoundCornersNone,         // Was
