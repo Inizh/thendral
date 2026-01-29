@@ -15,8 +15,13 @@ set(IMGUI_SOURCES
     ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
 )
 
+set(APPLICATION
+        application.cpp
+        application.h
+)
+
 # Create the executable
-add_executable(thendral_frontend main.cpp ${IMGUI_SOURCES})
+add_executable(thendral_frontend ${APPLICATION} ${IMGUI_SOURCES})
 
 target_include_directories(thendral_frontend PRIVATE 
     ${IMGUI_DIR}
