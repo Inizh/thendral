@@ -6,13 +6,13 @@
 
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_opengl.h>
-#include "thendral.h"
 
 #include <cstdio>
 
 #include "imgui.h"
 #include "imgui_impl_opengl3.h"
 #include "imgui_impl_sdl3.h"
+#include "thendral.h"
 
 int main(const int argc, const char* argv[]) {
 	// INIT SDL
@@ -128,10 +128,10 @@ int main(const int argc, const char* argv[]) {
 
 <<<<<<< HEAD
 		Thendral::print();
-        // Start the Dear ImGui frame
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplSDL3_NewFrame();
-        ImGui::NewFrame();
+		// Start the Dear ImGui frame
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplSDL3_NewFrame();
+		ImGui::NewFrame();
 =======
 		// Start the Dear ImGui frame
 		ImGui_ImplOpenGL3_NewFrame();

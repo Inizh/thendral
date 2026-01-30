@@ -2,4 +2,3 @@ namespace Thendral {
 
 void print();
 }
-
