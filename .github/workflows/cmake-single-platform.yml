@@ -15,6 +15,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Install SDL3
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libsdl3-dev
 
     - name: Configure CMake
       working-directory: src
