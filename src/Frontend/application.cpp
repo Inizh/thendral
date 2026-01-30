@@ -9,6 +9,7 @@
 #include <cstdio>
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_opengl.h>
+#include "thendral.h"
 
 
 int main(const int argc, const char *argv[]) {
@@ -111,6 +112,7 @@ int main(const int argc, const char *argv[]) {
             continue;
         }
 
+		Thendral::print();
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplSDL3_NewFrame();

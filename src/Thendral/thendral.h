@@ -1,0 +1,5 @@
+namespace Thendral {
+
+void print();
+}
+
