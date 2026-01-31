@@ -154,6 +154,30 @@ application.cpp.s:
 	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/application.cpp.s
 .PHONY : application.cpp.s
 
+custom_functions.o: custom_functions.cpp.o
+.PHONY : custom_functions.o
+
+# target to build an object file
+custom_functions.cpp.o:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o
+.PHONY : custom_functions.cpp.o
+
+custom_functions.i: custom_functions.cpp.i
+.PHONY : custom_functions.i
+
+# target to preprocess a source file
+custom_functions.cpp.i:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.i
+.PHONY : custom_functions.cpp.i
+
+custom_functions.s: custom_functions.cpp.s
+.PHONY : custom_functions.s
+
+# target to generate assembly for a file
+custom_functions.cpp.s:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.s
+.PHONY : custom_functions.cpp.s
+
 home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.o: home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o
 .PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.o
 
@@ -334,6 +358,9 @@ help:
 	@echo "... application.o"
 	@echo "... application.i"
 	@echo "... application.s"
+	@echo "... custom_functions.o"
+	@echo "... custom_functions.i"
+	@echo "... custom_functions.s"
 	@echo "... home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.o"
 	@echo "... home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.i"
 	@echo "... home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.s"

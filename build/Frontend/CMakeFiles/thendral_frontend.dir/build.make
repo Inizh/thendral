@@ -86,10 +86,24 @@ Frontend/CMakeFiles/thendral_frontend.dir/application.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/thendral_frontend.dir/application.cpp.s"
 	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunit/Documents/thendral/src/Frontend/application.cpp -o CMakeFiles/thendral_frontend.dir/application.cpp.s
 
+Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/flags.make
+Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o: /home/gunit/Documents/thendral/src/Frontend/custom_functions.cpp
+Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o"
+	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o -MF CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o.d -o CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o -c /home/gunit/Documents/thendral/src/Frontend/custom_functions.cpp
+
+Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/thendral_frontend.dir/custom_functions.cpp.i"
+	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gunit/Documents/thendral/src/Frontend/custom_functions.cpp > CMakeFiles/thendral_frontend.dir/custom_functions.cpp.i
+
+Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/thendral_frontend.dir/custom_functions.cpp.s"
+	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gunit/Documents/thendral/src/Frontend/custom_functions.cpp -o CMakeFiles/thendral_frontend.dir/custom_functions.cpp.s
+
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/flags.make
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o: /home/gunit/Documents/thendral/lib/imgui/imgui.cpp
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o"
 	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o -MF CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o.d -o CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o -c /home/gunit/Documents/thendral/lib/imgui/imgui.cpp
 
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.i: cmake_force
@@ -103,7 +117,7 @@ Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgu
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/flags.make
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o: /home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o"
 	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o -MF CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o.d -o CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o -c /home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp
 
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.i: cmake_force
@@ -117,7 +131,7 @@ Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgu
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/flags.make
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o: /home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o"
 	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o -MF CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o.d -o CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o -c /home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp
 
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.i: cmake_force
@@ -131,7 +145,7 @@ Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgu
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/flags.make
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o: /home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o"
 	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o -MF CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o -c /home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp
 
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.i: cmake_force
@@ -145,7 +159,7 @@ Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgu
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/flags.make
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o: /home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o"
 	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o -MF CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o.d -o CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o -c /home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp
 
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.i: cmake_force
@@ -159,7 +173,7 @@ Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgu
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/flags.make
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o: /home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o"
 	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o -MF CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o.d -o CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o -c /home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp
 
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.i: cmake_force
@@ -173,7 +187,7 @@ Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgu
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/flags.make
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o: /home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o: Frontend/CMakeFiles/thendral_frontend.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o"
 	cd /home/gunit/Documents/thendral/build/Frontend && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o -c /home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp
 
 Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.i: cmake_force
@@ -187,6 +201,7 @@ Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgu
 # Object files for target thendral_frontend
 thendral_frontend_OBJECTS = \
 "CMakeFiles/thendral_frontend.dir/application.cpp.o" \
+"CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o" \
 "CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o" \
 "CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o" \
 "CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o" \
@@ -199,6 +214,7 @@ thendral_frontend_OBJECTS = \
 thendral_frontend_EXTERNAL_OBJECTS =
 
 Frontend/thendral_frontend: Frontend/CMakeFiles/thendral_frontend.dir/application.cpp.o
+Frontend/thendral_frontend: Frontend/CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o
 Frontend/thendral_frontend: Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o
 Frontend/thendral_frontend: Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o
 Frontend/thendral_frontend: Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o
@@ -213,7 +229,7 @@ Frontend/thendral_frontend: /usr/lib/libSDL3.so.0.4.0
 Frontend/thendral_frontend: /usr/lib/libGLX.so
 Frontend/thendral_frontend: /usr/lib/libOpenGL.so
 Frontend/thendral_frontend: Frontend/CMakeFiles/thendral_frontend.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable thendral_frontend"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gunit/Documents/thendral/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable thendral_frontend"
 	cd /home/gunit/Documents/thendral/build/Frontend && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/thendral_frontend.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

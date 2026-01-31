@@ -3,11 +3,11 @@
 //
 
 #include "application.h"
-
+#include "custom.h"
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_opengl.h>
 
-#include <cstdio>
+#include <stdio.h>
 
 #include "imgui.h"
 #include "imgui_impl_opengl3.h"
@@ -164,6 +164,7 @@ int main(const int argc, const char* argv[]) {
 			if (ImGui::MenuItem("Help")) {
 			}
 			if (ImGui::MenuItem("About")) {
+				OpenURLInBrowser("https://github.com/inizh/thendral");
 			}
 			if (ImGui::MenuItem("Quit")) {
 				done = true;

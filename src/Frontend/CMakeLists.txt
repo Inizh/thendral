@@ -18,6 +18,8 @@ set(IMGUI_SOURCES
 set(APPLICATION
         application.cpp
         application.h
+        custom_functions.cpp
+        custom.h
 )
 
 # Create the executable

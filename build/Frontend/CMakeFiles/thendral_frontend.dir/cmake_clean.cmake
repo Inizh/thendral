@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/thendral_frontend.dir/link.d"
   "CMakeFiles/thendral_frontend.dir/application.cpp.o"
   "CMakeFiles/thendral_frontend.dir/application.cpp.o.d"
+  "CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o"
+  "CMakeFiles/thendral_frontend.dir/custom_functions.cpp.o.d"
   "CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o"
   "CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o.d"
   "CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o"
