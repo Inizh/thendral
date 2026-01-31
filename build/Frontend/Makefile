@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jckawin/thendral/src
+CMAKE_SOURCE_DIR = /home/gunit/Documents/thendral/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jckawin/thendral/build
+CMAKE_BINARY_DIR = /home/gunit/Documents/thendral/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/jckawin/thendral/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jckawin/thendral/build/CMakeFiles /home/jckawin/thendral/build/Frontend//CMakeFiles/progress.marks
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jckawin/thendral/build/CMakeFiles 0
+	cd /home/gunit/Documents/thendral/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gunit/Documents/thendral/build/CMakeFiles /home/gunit/Documents/thendral/build/Frontend//CMakeFiles/progress.marks
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gunit/Documents/thendral/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/clean
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/preinstall
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/preinstall
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/jckawin/thendral/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gunit/Documents/thendral/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Frontend/CMakeFiles/thendral_frontend.dir/rule:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/CMakeFiles/thendral_frontend.dir/rule
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Frontend/CMakeFiles/thendral_frontend.dir/rule
 .PHONY : Frontend/CMakeFiles/thendral_frontend.dir/rule
 
 # Convenience name for target.
@@ -127,200 +127,200 @@ thendral_frontend: Frontend/CMakeFiles/thendral_frontend.dir/rule
 
 # fast build rule for target.
 thendral_frontend/fast:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/build
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/build
 .PHONY : thendral_frontend/fast
 
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.o: home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.o
+application.o: application.cpp.o
+.PHONY : application.o
 
 # target to build an object file
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o
+application.cpp.o:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/application.cpp.o
+.PHONY : application.cpp.o
 
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.i: home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.i
+application.i: application.cpp.i
+.PHONY : application.i
 
 # target to preprocess a source file
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.i:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.i
+application.cpp.i:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/application.cpp.i
+.PHONY : application.cpp.i
 
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.s: home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.s
+application.s: application.cpp.s
+.PHONY : application.s
 
 # target to generate assembly for a file
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.s:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.s
+application.cpp.s:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/application.cpp.s
+.PHONY : application.cpp.s
 
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.o: home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.o
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.o: home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.o
 
 # target to build an object file
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o
 
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.i: home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.i
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.i: home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.i
 
 # target to preprocess a source file
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.i:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.i
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.i:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.i
 
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.s: home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.s
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.s: home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.s
 
 # target to generate assembly for a file
-home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.s:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.s
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.s:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.s
 
-home/jckawin/thendral/lib/imgui/imgui.o: home/jckawin/thendral/lib/imgui/imgui.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui.o
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.o: home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.o
 
 # target to build an object file
-home/jckawin/thendral/lib/imgui/imgui.cpp.o:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui.cpp.o
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o
 
-home/jckawin/thendral/lib/imgui/imgui.i: home/jckawin/thendral/lib/imgui/imgui.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui.i
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.i: home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.i
 
 # target to preprocess a source file
-home/jckawin/thendral/lib/imgui/imgui.cpp.i:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui.cpp.i
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.i:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.i
 
-home/jckawin/thendral/lib/imgui/imgui.s: home/jckawin/thendral/lib/imgui/imgui.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui.s
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.s: home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.s
 
 # target to generate assembly for a file
-home/jckawin/thendral/lib/imgui/imgui.cpp.s:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui.cpp.s
+home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.s:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.s
 
-home/jckawin/thendral/lib/imgui/imgui_demo.o: home/jckawin/thendral/lib/imgui/imgui_demo.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_demo.o
+home/gunit/Documents/thendral/lib/imgui/imgui.o: home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui.o
 
 # target to build an object file
-home/jckawin/thendral/lib/imgui/imgui_demo.cpp.o:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_demo.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_demo.cpp.o
+home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o
 
-home/jckawin/thendral/lib/imgui/imgui_demo.i: home/jckawin/thendral/lib/imgui/imgui_demo.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_demo.i
+home/gunit/Documents/thendral/lib/imgui/imgui.i: home/gunit/Documents/thendral/lib/imgui/imgui.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui.i
 
 # target to preprocess a source file
-home/jckawin/thendral/lib/imgui/imgui_demo.cpp.i:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_demo.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_demo.cpp.i
+home/gunit/Documents/thendral/lib/imgui/imgui.cpp.i:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui.cpp.i
 
-home/jckawin/thendral/lib/imgui/imgui_demo.s: home/jckawin/thendral/lib/imgui/imgui_demo.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_demo.s
+home/gunit/Documents/thendral/lib/imgui/imgui.s: home/gunit/Documents/thendral/lib/imgui/imgui.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui.s
 
 # target to generate assembly for a file
-home/jckawin/thendral/lib/imgui/imgui_demo.cpp.s:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_demo.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_demo.cpp.s
+home/gunit/Documents/thendral/lib/imgui/imgui.cpp.s:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui.cpp.s
 
-home/jckawin/thendral/lib/imgui/imgui_draw.o: home/jckawin/thendral/lib/imgui/imgui_draw.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_draw.o
+home/gunit/Documents/thendral/lib/imgui/imgui_demo.o: home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_demo.o
 
 # target to build an object file
-home/jckawin/thendral/lib/imgui/imgui_draw.cpp.o:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_draw.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_draw.cpp.o
+home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o
 
-home/jckawin/thendral/lib/imgui/imgui_draw.i: home/jckawin/thendral/lib/imgui/imgui_draw.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_draw.i
+home/gunit/Documents/thendral/lib/imgui/imgui_demo.i: home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_demo.i
 
 # target to preprocess a source file
-home/jckawin/thendral/lib/imgui/imgui_draw.cpp.i:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_draw.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_draw.cpp.i
+home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.i:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.i
 
-home/jckawin/thendral/lib/imgui/imgui_draw.s: home/jckawin/thendral/lib/imgui/imgui_draw.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_draw.s
+home/gunit/Documents/thendral/lib/imgui/imgui_demo.s: home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_demo.s
 
 # target to generate assembly for a file
-home/jckawin/thendral/lib/imgui/imgui_draw.cpp.s:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_draw.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_draw.cpp.s
+home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.s:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.s
 
-home/jckawin/thendral/lib/imgui/imgui_tables.o: home/jckawin/thendral/lib/imgui/imgui_tables.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_tables.o
+home/gunit/Documents/thendral/lib/imgui/imgui_draw.o: home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_draw.o
 
 # target to build an object file
-home/jckawin/thendral/lib/imgui/imgui_tables.cpp.o:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_tables.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_tables.cpp.o
+home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o
 
-home/jckawin/thendral/lib/imgui/imgui_tables.i: home/jckawin/thendral/lib/imgui/imgui_tables.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_tables.i
+home/gunit/Documents/thendral/lib/imgui/imgui_draw.i: home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_draw.i
 
 # target to preprocess a source file
-home/jckawin/thendral/lib/imgui/imgui_tables.cpp.i:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_tables.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_tables.cpp.i
+home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.i:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.i
 
-home/jckawin/thendral/lib/imgui/imgui_tables.s: home/jckawin/thendral/lib/imgui/imgui_tables.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_tables.s
+home/gunit/Documents/thendral/lib/imgui/imgui_draw.s: home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_draw.s
 
 # target to generate assembly for a file
-home/jckawin/thendral/lib/imgui/imgui_tables.cpp.s:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_tables.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_tables.cpp.s
+home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.s:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.s
 
-home/jckawin/thendral/lib/imgui/imgui_widgets.o: home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_widgets.o
+home/gunit/Documents/thendral/lib/imgui/imgui_tables.o: home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_tables.o
 
 # target to build an object file
-home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.o:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.o
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.o
+home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o
 
-home/jckawin/thendral/lib/imgui/imgui_widgets.i: home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_widgets.i
+home/gunit/Documents/thendral/lib/imgui/imgui_tables.i: home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_tables.i
 
 # target to preprocess a source file
-home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.i:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.i
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.i
+home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.i:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.i
 
-home/jckawin/thendral/lib/imgui/imgui_widgets.s: home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_widgets.s
+home/gunit/Documents/thendral/lib/imgui/imgui_tables.s: home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_tables.s
 
 # target to generate assembly for a file
-home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.s:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.s
-.PHONY : home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.s
+home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.s:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+home/gunit/Documents/thendral/lib/imgui/imgui_widgets.o: home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_widgets.o
 
 # target to build an object file
-main.cpp.o:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/main.cpp.o
-.PHONY : main.cpp.o
+home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+home/gunit/Documents/thendral/lib/imgui/imgui_widgets.i: home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_widgets.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/main.cpp.i
-.PHONY : main.cpp.i
+home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.i:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.i
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+home/gunit/Documents/thendral/lib/imgui/imgui_widgets.s: home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_widgets.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /home/jckawin/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/main.cpp.s
-.PHONY : main.cpp.s
+home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.s:
+	cd /home/gunit/Documents/thendral/build && $(MAKE) $(MAKESILENT) -f Frontend/CMakeFiles/thendral_frontend.dir/build.make Frontend/CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.s
+.PHONY : home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.s
 
 # Help Target
 help:
@@ -331,30 +331,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... thendral_frontend"
-	@echo "... home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.o"
-	@echo "... home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.i"
-	@echo "... home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.s"
-	@echo "... home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.o"
-	@echo "... home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.i"
-	@echo "... home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.s"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui.o"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui.i"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui.s"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_demo.o"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_demo.i"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_demo.s"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_draw.o"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_draw.i"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_draw.s"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_tables.o"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_tables.i"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_tables.s"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_widgets.o"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_widgets.i"
-	@echo "... home/jckawin/thendral/lib/imgui/imgui_widgets.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... application.o"
+	@echo "... application.i"
+	@echo "... application.s"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.o"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.i"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.s"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.o"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.i"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.s"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui.o"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui.i"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui.s"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_demo.o"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_demo.i"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_demo.s"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_draw.o"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_draw.i"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_draw.s"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_tables.o"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_tables.i"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_tables.s"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_widgets.o"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_widgets.i"
+	@echo "... home/gunit/Documents/thendral/lib/imgui/imgui_widgets.s"
 .PHONY : help
 
 
@@ -366,6 +366,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/jckawin/thendral/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gunit/Documents/thendral/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

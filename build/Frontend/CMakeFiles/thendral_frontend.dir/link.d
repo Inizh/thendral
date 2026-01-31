@@ -2,14 +2,14 @@ thendral_frontend: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
-  CMakeFiles/thendral_frontend.dir/main.cpp.o \
-  CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui.cpp.o \
-  CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_draw.cpp.o \
-  CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_tables.cpp.o \
-  CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.o \
-  CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_demo.cpp.o \
-  CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o \
-  CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o \
+  CMakeFiles/thendral_frontend.dir/application.cpp.o \
+  CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o \
+  CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o \
+  CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o \
+  CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o \
+  CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o \
+  CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o \
+  CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o \
   ../Thendral/libthendral_dll.so \
   /usr/lib/libSDL3.so.0.4.0 \
   /usr/lib/libGLX.so \
@@ -58,21 +58,21 @@ thendral_frontend: \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
 
-CMakeFiles/thendral_frontend.dir/main.cpp.o:
+CMakeFiles/thendral_frontend.dir/application.cpp.o:
 
-CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui.cpp.o:
+CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui.cpp.o:
 
-CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_draw.cpp.o:
+CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_draw.cpp.o:
 
-CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_tables.cpp.o:
+CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_tables.cpp.o:
 
-CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_widgets.cpp.o:
+CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_widgets.cpp.o:
 
-CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/imgui_demo.cpp.o:
+CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/imgui_demo.cpp.o:
 
-CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o:
+CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_sdl3.cpp.o:
 
-CMakeFiles/thendral_frontend.dir/home/jckawin/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o:
+CMakeFiles/thendral_frontend.dir/home/gunit/Documents/thendral/lib/imgui/backends/imgui_impl_opengl3.cpp.o:
 
 ../Thendral/libthendral_dll.so:
 

@@ -126,18 +126,10 @@ int main(const int argc, const char* argv[]) {
 			continue;
 		}
 
-<<<<<<< HEAD
-		Thendral::print();
 		// Start the Dear ImGui frame
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplSDL3_NewFrame();
 		ImGui::NewFrame();
-=======
-		// Start the Dear ImGui frame
-		ImGui_ImplOpenGL3_NewFrame();
-		ImGui_ImplSDL3_NewFrame();
-		ImGui::NewFrame();
->>>>>>> refs/remotes/origin/main
 
 		ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport(),
 									 ImGuiDockNodeFlags_PassthruCentralNode);

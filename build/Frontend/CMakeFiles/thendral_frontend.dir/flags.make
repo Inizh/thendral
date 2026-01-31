@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/jckawin/thendral/src/Frontend/../../lib/imgui -I/home/jckawin/thendral/src/Frontend/../../lib/imgui/backends -I/home/jckawin/thendral/src/Thendral
+CXX_INCLUDES = -I/home/gunit/Documents/thendral/src/Frontend/../../lib/imgui -I/home/gunit/Documents/thendral/src/Frontend/../../lib/imgui/backends -I/home/gunit/Documents/thendral/src/Thendral
 
 CXX_FLAGS = 
 
