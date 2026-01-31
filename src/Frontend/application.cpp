@@ -3,12 +3,12 @@
 //
 
 #include "application.h"
-#include "custom.h"
+
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_opengl.h>
-
 #include <stdio.h>
 
+#include "custom.h"
 #include "imgui.h"
 #include "imgui_impl_opengl3.h"
 #include "imgui_impl_sdl3.h"
